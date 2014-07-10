@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="vertical" >
+
+    <FrameLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" >
+
+        <TextView
+            android:id="@+id/tvDay"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:text="21"
+            android:background="@drawable/bg_calendar_free_day" />
+
+        <ImageView
+            android:id="@+id/ivOrder"
+            android:layout_width="15dp"
+            android:layout_height="15dp"
+            android:layout_marginRight="3dp"
+            android:layout_marginBottom="3dp"
+            android:layout_gravity="bottom|right"
+            android:visibility="gone"
+            android:src="@drawable/ic_order_confirm" />
+    </FrameLayout>
+
+</LinearLayout>

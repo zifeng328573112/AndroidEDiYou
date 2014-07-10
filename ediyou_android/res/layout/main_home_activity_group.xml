@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/flMainHomeTh"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:clickable="true" >
+<!-- 丽江版 -->
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="top"
+        android:orientation="vertical" >
+
+        <RelativeLayout
+            android:id="@+id/rlCommon"
+            android:layout_width="fill_parent"
+            android:layout_height="56dp"
+            android:background="@drawable/bg_title"
+            android:paddingTop="3dp" >
+
+            <Button
+                android:id="@+id/btnLeft"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="10dp"
+                android:background="@drawable/ic_menu" />
+            
+			<!-- id/llHomeCenterTitle 部分已 gone -->
+            <LinearLayout
+                android:id="@+id/llHomeCenterTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:clickable="true"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:visibility="gone" >
+
+                <TextView
+                    android:id="@+id/tvTitleLocation"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:ellipsize="end"
+                    android:shadowColor="@android:color/darker_gray"
+                    android:shadowDx="0.5"
+                    android:shadowDy="0.5"
+                    android:shadowRadius="0.3"
+                    android:singleLine="true"
+                    android:text="丽江"
+                    android:textColor="@android:color/white"
+                    android:textSize="22sp"
+                    android:textStyle="bold" />
+
+                <ImageView
+                    android:id="@+id/ivChoiceLocation"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="2dp"
+                    android:src="@drawable/ic_location_choice" />
+            </LinearLayout>
+
+            <!-- 以下两个button做了修改：放置在LinearLayout中，并居中 -->
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:gravity="center"
+                android:orientation="horizontal">
+            <Button
+                android:id="@id/btnHome"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/ic_title_right_home_sel"
+                android:shadowColor="@android:color/darker_gray"
+                android:shadowDx="0.5"
+                android:shadowDy="0.5"
+                android:shadowRadius="0.3"
+                android:text="袋鼠"
+                android:textColor="@android:color/white"
+                android:textSize="14sp" />
+
+            <Button
+                android:id="@id/btnEvent"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="10dp"
+                android:background="@drawable/ic_title_right_event_nor"
+                android:shadowColor="@android:color/darker_gray"
+                android:shadowDx="0.5"
+                android:shadowDy="0.5"
+                android:shadowRadius="0.3"
+                android:text="活动"
+                android:textColor="@color/text_green"
+                android:textSize="14sp" />
+            </LinearLayout>
+            <!-- 新添加按钮 -->
+             <Button
+                android:id="@+id/btnRight"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="10dp"
+                android:background="@drawable/ic_my_location" />
+        </RelativeLayout>
+
+        <LinearLayout
+            android:id="@+id/container"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:background="@android:color/transparent"
+            android:orientation="horizontal" >
+        </LinearLayout>
+    </LinearLayout>
+
+    <!-- 底部图片按钮点击状态 -->
+
+    <RelativeLayout
+        android:id="@+id/rlFunction"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|center" >
+
+        <ImageView
+            android:id="@+id/ivCenterBottom"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:clickable="false"
+            android:background="@drawable/ic_home_foot_kaola"
+            android:visibility="invisible" />
+
+        <ImageView
+            android:id="@+id/ivFunctionOrders"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@id/ivCenterBottom"
+            android:layout_marginBottom="-40dp"
+            android:layout_marginRight="-12dp"
+            android:layout_toLeftOf="@id/ivCenterBottom"
+            android:clickable="true"
+            android:src="@drawable/ic_home_foot_order"
+            android:visibility="gone" />
+
+        <ImageView
+            android:id="@+id/ivFunctionMyhome"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@id/ivCenterBottom"
+            android:layout_marginBottom="-6dp"
+            android:layout_marginRight="-51dp"
+            android:layout_toLeftOf="@id/ivCenterBottom"
+            android:src="@drawable/ic_home_foot_find"
+            android:visibility="gone" />
+
+        <ImageView
+            android:id="@+id/ivFunctionEvent"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@id/ivCenterBottom"
+            android:layout_marginBottom="-6dp"
+            android:layout_marginLeft="-51dp"
+            android:layout_toRightOf="@id/ivCenterBottom"
+            android:clickable="true"
+            android:src="@drawable/ic_home_foot_event"
+            android:visibility="gone" />
+
+        <ImageView
+            android:id="@+id/ivFunctionMsg"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@id/ivCenterBottom"
+            android:layout_marginBottom="-40dp"
+            android:layout_marginLeft="-12dp"
+            android:layout_toRightOf="@id/ivCenterBottom"
+            android:clickable="true"
+            android:src="@drawable/ic_home_foot_msg"
+            android:visibility="gone" />
+    </RelativeLayout>
+
+    <ImageView
+        android:id="@+id/ivFunction"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|center"
+        android:clickable="true" />
+
+</FrameLayout>

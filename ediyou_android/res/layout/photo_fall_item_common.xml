@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="match_parent" >
+
+<!-- 暂未使用 -->
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@android:color/white"
+        android:orientation="vertical"
+        android:padding="10dp" >
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="120dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/bg_photo_defualt" />
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content" >
+
+            <TextView
+                android:id="@+id/tvCollect"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="0dp"
+                android:drawableLeft="@drawable/ic_comment_nor"
+                android:gravity="center"
+                android:paddingRight="10dp"
+                android:text="112"
+                android:textColor="@color/order_green_color"
+                android:textSize="12.0sp" />
+
+            <TextView
+                android:id="@+id/tvShare"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="0dp"
+                android:layout_toRightOf="@id/tvCollect"
+                android:drawableLeft="@drawable/ic_comment_nor"
+                android:gravity="center"
+                android:text="118"
+                android:textColor="@color/order_green_color"
+                android:textSize="12.0sp" />
+
+            <TextView
+                android:id="@+id/tvComment"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="0dp"
+                android:drawableLeft="@drawable/ic_comment_nor"
+                android:gravity="center"
+                android:paddingRight="10dp"
+                android:text="118"
+                android:textColor="@color/order_green_color"
+                android:textSize="12.0sp" />
+        </RelativeLayout>
+    </LinearLayout>
+    <ProgressBar android:id="@+id/progress_load"
+        style="?android:attr/progressBarStyleSmallInverse"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" 
+        android:layout_gravity="center"
+        />
+
+</FrameLayout>

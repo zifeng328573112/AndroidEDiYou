@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_repeat"
+    android:orientation="vertical" >
+
+    <include layout="@layout/common_title_bar" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="20dp"
+        android:gravity="center_horizontal"
+        android:orientation="vertical" >
+
+        <EditText
+            android:id="@+id/edtPhoneNum"
+            android:layout_width="fill_parent"
+            android:layout_height="40dp"
+            android:layout_marginLeft="50dp"
+            android:layout_marginRight="50dp"
+            android:background="@drawable/bg_describe"
+            android:focusable="true"
+            android:hint="请输入手机号码"
+            android:inputType="number"
+            android:padding="8dp"
+            android:selectAllOnFocus="true"
+            android:singleLine="true"
+            android:textColorHint="@color/hint_gray"
+            android:textSize="16sp" />
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="50dp"
+            android:layout_marginRight="50dp" >
+
+            <Button
+                android:id="@+id/btnGetAuthCode"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:background="@drawable/bg_btn_nor"
+                android:text="获取验证码"
+                android:textColor="@color/text_green"
+                android:textSize="14sp"
+                android:textStyle="bold" />
+            <TextView 
+                android:id="@+id/tvShowSecond"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toLeftOf="@id/btnGetAuthCode"
+                android:layout_centerVertical="true"
+                android:text="60秒后可重发"
+                android:textSize="12sp"
+                android:textColor="@android:color/black"
+                android:visibility="gone"
+                />
+        </RelativeLayout>
+
+        <EditText
+            android:id="@+id/edtPutAuthCode"
+            android:layout_width="fill_parent"
+            android:layout_height="40dp"
+            android:layout_marginBottom="6dp"
+            android:layout_marginLeft="50dp"
+            android:layout_marginRight="50dp"
+            android:background="@drawable/bg_describe"
+            android:hint="请输入验证码"
+            android:padding="8dp"
+            android:selectAllOnFocus="true"
+            android:singleLine="true"
+            android:textColorHint="@color/hint_gray"
+            android:textSize="16sp" />
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="50dp"
+            android:layout_marginRight="50dp"
+            android:layout_marginTop="10dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal" >
+
+            <Button
+                android:id="@+id/btnCheck"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/ic_check_nor" />
+
+            <TextView
+                android:id="@+id/tvUserProtocol"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="我同意用户注册协议" />
+        </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>

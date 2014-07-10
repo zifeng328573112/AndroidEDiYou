@@ -1,0 +1,309 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical"
+    android:background="@color/bg_nor" >
+
+    <include layout="@layout/common_title_bar" />
+
+    <ScrollView
+            android:id="@+id/svivSearch"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:scrollbars="none"
+            android:padding="10dp" >
+            
+	    <LinearLayout 
+	        android:layout_width="fill_parent"
+		    android:layout_height="fill_parent"
+		    android:orientation="vertical">
+		    
+		    <LinearLayout 
+		        android:layout_width="fill_parent"
+		        android:layout_height="wrap_content"
+		        android:layout_marginTop="5dp"
+		        android:orientation="vertical">
+		        
+		        <TextView 
+		            android:layout_width="fill_parent"
+		            android:layout_height="wrap_content"
+		            android:textColor="#C6BA91"
+		            android:textStyle="bold"
+		            android:textSize="17dp"
+		            android:text="活动标题"/>
+		        
+		        <EditText 
+		            android:id="@+id/etSearchInfo"
+		            android:layout_width="fill_parent"
+		            android:layout_height="wrap_content"
+		            android:background="@drawable/bg_describe"
+		            android:singleLine="true"
+		            android:paddingLeft="10dp"
+		            android:autoText="true"
+		            android:textSize="15dp"
+		            android:hint="请输入您要搜索的信息"
+		            android:textColorHint="@color/hint_gray"/>
+		        
+		    </LinearLayout>
+		    
+		    <LinearLayout 
+		        android:layout_width="fill_parent"
+		        android:layout_height="wrap_content"
+		        android:layout_marginTop="15dp"
+		        android:orientation="vertical">
+		        
+		        <TextView 
+		            android:layout_width="fill_parent"
+		            android:layout_height="wrap_content"
+		            android:textColor="#C6BA91"
+		            android:textStyle="bold"
+		            android:textSize="17dp"
+		            android:text="活动类型"/>
+		        
+		        <RadioGroup 
+					    android:id="@+id/rgEventType"
+					    android:layout_width="fill_parent"
+					    android:layout_height="fill_parent"
+					    android:orientation="horizontal"
+					    android:layout_marginTop="2dp">
+					    
+		                <RadioButton 
+		                    android:id="@+id/rbEventTypeTravel"
+		                    android:layout_width="wrap_content"
+		                    android:layout_height="wrap_content"
+		                    android:background="@drawable/bg_radiobtn_fillet"
+		                    android:checked="true"
+		                    android:text="游山玩水"
+		                    android:textSize="13dp"
+		                    android:textColor="#A1BE7F"
+		                    android:layout_weight="1"
+		                    android:gravity="center"
+		                    android:paddingTop="15dp"
+		                    android:paddingBottom="15dp"
+		                    android:tag="1"
+		                    android:button="@null"/>
+		                
+		                <RadioButton 
+		                    android:id="@+id/rbEventTypeParty"
+		                    android:layout_width="wrap_content"
+		                    android:layout_height="wrap_content"
+		                    android:background="@drawable/bg_radiobtn_fillet"
+		                    android:checked="false"
+		                    android:text="深夜狂欢"
+		                    android:textSize="13dp"
+		                    android:textColor="#9C9B9B"
+		                    android:layout_weight="1"
+		                    android:gravity="center"
+		                    android:paddingTop="15dp"
+		                    android:paddingBottom="15dp"
+		                    android:tag="2"
+		                    android:button="@null"/>	 
+		                    
+		                <RadioButton 
+		                    android:id="@+id/rbEventTypeShoping"
+		                    android:layout_width="wrap_content"
+		                    android:layout_height="wrap_content"
+		                    android:background="@drawable/bg_radiobtn_fillet"
+		                    android:checked="false"
+		                    android:text="逛街购物"
+		                    android:textSize="13dp"
+		                    android:textColor="#9C9B9B"
+		                    android:layout_weight="1"
+		                    android:gravity="center"
+		                    android:paddingTop="15dp"
+		                    android:paddingBottom="15dp"
+		                    android:tag="3"
+		                    android:button="@null"/>	 
+		                    
+		                <RadioButton 
+		                    android:id="@+id/rbEventTypeCate"
+		                    android:layout_width="wrap_content"
+		                    android:layout_height="wrap_content"
+		                    android:background="@drawable/bg_radiobtn_fillet"
+		                    android:checked="false"
+		                    android:text="吃吃喝喝"
+		                    android:textSize="13dp"
+		                    android:textColor="#9C9B9B"
+		                    android:layout_weight="1"
+		                    android:gravity="center"
+		                    android:paddingTop="15dp"
+		                    android:paddingBottom="15dp"
+		                    android:tag="4"
+		                    android:button="@null"/>
+					    
+					</RadioGroup>
+		        
+		    </LinearLayout>
+		    
+		    <LinearLayout 
+		        android:layout_width="fill_parent"
+		        android:layout_height="wrap_content"
+		        android:layout_marginTop="15dp"
+		        android:orientation="vertical">
+		        
+		        <TextView 
+		            android:layout_width="fill_parent"
+		            android:layout_height="wrap_content"
+		            android:textColor="#C6BA91"
+		            android:textStyle="bold"
+		            android:textSize="17dp"
+		            android:text="活动开始时间"/>
+		        
+	        	<RelativeLayout
+	                android:id="@+id/rlEventStartTime"
+	                android:layout_width="fill_parent"
+	                android:layout_height="wrap_content"
+	                android:layout_marginTop="5dp"
+	                android:padding="10dp"
+	                android:background="@drawable/bg_describe"
+	                android:clickable="true" >
+	
+	                <TextView
+	                    android:id="@+id/tvEventStartTime"
+	                    android:layout_width="wrap_content"
+	                    android:layout_height="wrap_content"
+	                    android:layout_alignParentLeft="true"
+	                    android:layout_centerVertical="true"
+	                    android:textSize="16dp"
+	                    android:text="不限" />
+	
+	                <ImageView
+	                    android:id="@+id/ivEventStartTime"
+	                    android:layout_width="wrap_content"
+	                    android:layout_height="wrap_content"
+	                    android:layout_alignParentRight="true"
+	                    android:layout_centerVertical="true"
+	                    android:layout_marginRight="5dp"
+	                    android:src="@drawable/ic_item_more" />
+	            </RelativeLayout>
+		    </LinearLayout>
+		    
+		    <LinearLayout 
+		        android:layout_width="fill_parent"
+		        android:layout_height="wrap_content"
+		        android:layout_marginTop="15dp"
+		        android:orientation="vertical">
+		        
+		        <TextView 
+		            android:layout_width="fill_parent"
+		            android:layout_height="wrap_content"
+		            android:textColor="#C6BA91"
+		            android:textStyle="bold"
+		            android:textSize="17dp"
+		            android:text=" 人均费用"/>
+		        
+		        <RadioGroup 
+				    android:id="@+id/rgCostAverage1"
+				    android:layout_width="fill_parent"
+				    android:layout_height="fill_parent"
+				    android:orientation="horizontal"
+				    android:layout_marginTop="5dp">
+
+	                <RadioButton 
+	                    android:id="@+id/rbCostAverage0to100"
+	                    android:layout_width="wrap_content"
+	                    android:layout_height="wrap_content"
+	                    android:background="@drawable/bg_radiobtn_fillet"
+	                    android:checked="true"
+	                    android:text="100以下"
+	                    android:textSize="15dp"
+	                    android:textColor="#A1BE7F"
+	                    android:layout_weight="1"
+	                    android:gravity="center"
+	                    android:paddingTop="15dp"
+                    	android:paddingBottom="15dp"
+                    	android:tag="0,100"
+	                    android:button="@null"/>
+	                
+	                <RadioButton 
+	                    android:id="@+id/rbCostAverage101to150"
+	                    android:layout_width="wrap_content"
+	                    android:layout_height="wrap_content"
+	                    android:background="@drawable/bg_radiobtn_fillet"
+	                    android:checked="false"
+	                    android:text="101-150"
+	                    android:textSize="15dp"
+	                    android:textColor="#9C9B9B"
+	                    android:layout_weight="1"
+	                    android:gravity="center"
+	                    android:paddingTop="15dp"
+                    	android:paddingBottom="15dp"
+                    	android:tag="101,150"
+	                    android:button="@null"/>	 
+	                    
+	                <RadioButton 
+	                    android:id="@+id/rbCostAverage151to200"
+	                    android:layout_width="wrap_content"
+	                    android:layout_height="wrap_content"
+	                    android:background="@drawable/bg_radiobtn_fillet"
+	                    android:checked="false"
+	                    android:text="151-200"
+	                    android:textSize="15dp"
+	                    android:textColor="#9C9B9B"
+	                    android:layout_weight="1"
+	                    android:gravity="center"
+	                    android:paddingTop="15dp"
+                    	android:paddingBottom="15dp"
+                    	android:tag="151,200"
+	                    android:button="@null"/>	 
+				</RadioGroup>
+				
+	        	<RadioGroup 
+				    android:id="@+id/rgCostAverage2"
+				    android:layout_width="fill_parent"
+				    android:layout_height="fill_parent"
+				    android:orientation="horizontal"
+				    android:layout_marginTop="5dp">
+	                <RadioButton 
+	                    android:id="@+id/rbCostAverage201to250"
+	                    android:layout_width="wrap_content"
+	                    android:layout_height="wrap_content"
+	                    android:background="@drawable/bg_radiobtn_fillet"
+	                    android:checked="false"
+	                    android:text="201-250"
+	                    android:textSize="15dp"
+	                    android:textColor="#9C9B9B"
+	                    android:layout_weight="1"
+	                    android:gravity="center"
+	                    android:paddingTop="15dp"
+                    	android:paddingBottom="15dp"
+                    	android:tag="201,250"
+	                    android:button="@null"/>
+	                
+	                <RadioButton 
+	                    android:id="@+id/rbCostAverage251to300"
+	                    android:layout_width="wrap_content"
+	                    android:layout_height="wrap_content"
+	                    android:background="@drawable/bg_radiobtn_fillet"
+	                    android:checked="false"
+	                    android:text="251-300"
+	                    android:textSize="15dp"
+	                    android:textColor="#9C9B9B"
+	                    android:layout_weight="1"
+	                    android:gravity="center"
+	                    android:paddingTop="15dp"
+                    	android:paddingBottom="15dp"
+                    	android:tag="251,300"
+	                    android:button="@null"/>
+	                
+	                <RadioButton 
+	                    android:id="@+id/rbCostAverage300More"
+	                    android:layout_width="wrap_content"
+	                    android:layout_height="wrap_content"
+	                    android:background="@drawable/bg_radiobtn_fillet"
+	                    android:checked="false"
+	                    android:text="300以上"
+	                    android:textSize="15dp"
+	                    android:textColor="#9C9B9B"
+	                    android:layout_weight="1"
+	                    android:gravity="center"
+	                    android:paddingTop="15dp"
+                    	android:paddingBottom="15dp"
+                    	android:tag="300,2000000000"
+	                    android:button="@null"/>
+				</RadioGroup>
+		    </LinearLayout>
+	    </LinearLayout>
+	</ScrollView>
+</LinearLayout>

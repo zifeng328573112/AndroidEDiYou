@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/dialog_bg"
+    android:orientation="vertical" >
+
+    <TextView
+        android:id="@+id/tvPickerDialogTitle"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:background="@drawable/dialog_title_bg"
+        android:gravity="center"
+        android:textColor="@android:color/white"
+        android:textSize="20sp"
+        android:textStyle="bold" />
+
+    <LinearLayout
+        android:id="@+id/countPicker"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal|center"
+        android:gravity="center_horizontal"
+        android:orientation="horizontal"
+        android:padding="5dp" >
+        <com.elephant.ediyou.view.datetimepicker.WheelView
+            android:id="@+id/cmOrKg"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="5dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:orientation="horizontal" >
+
+        <Button
+            android:id="@+id/btnDialogLeft"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:layout_marginRight="10dp"
+            android:layout_weight="1"
+            android:background="@drawable/bg_btn_selector"
+            android:text="取消"
+            android:textColor="@color/text_green"
+            android:textSize="16sp" />
+
+        <Button
+            android:id="@+id/btnDialogRight"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:layout_marginLeft="10dp"
+            android:layout_weight="1"
+            android:background="@drawable/bg_btn_selector"
+            android:text="确定"
+            android:textColor="@color/text_green"
+            android:textSize="16sp" />
+    </LinearLayout>
+
+</LinearLayout>

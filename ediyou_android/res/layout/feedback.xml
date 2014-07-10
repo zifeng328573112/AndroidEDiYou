@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_repeat"
+    android:orientation="vertical" >
+
+    <include layout="@layout/common_title_bar" />
+
+    <EditText
+        android:id="@+id/etContent"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:layout_marginLeft="18dp"
+        android:layout_marginRight="18dp"
+        android:layout_marginTop="18dp"
+        android:background="@drawable/bg_edit"
+        android:gravity="top"
+        android:hint="请输入您的建议或反馈(最多200字)"
+        android:textColorHint="@color/hint_gray"
+        android:lines="8"
+        android:padding="6dp"
+        android:selectAllOnFocus="true" />
+
+    <EditText
+        android:id="@+id/etUserPhone"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="18dp"
+        android:layout_marginRight="18dp"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/bg_edit"
+        android:hint="请输入您的手机号(11位)"
+        android:textColorHint="@color/hint_gray"
+        android:padding="6dp"
+        android:inputType="number"
+        android:selectAllOnFocus="true"
+        android:singleLine="true" />
+
+</LinearLayout>

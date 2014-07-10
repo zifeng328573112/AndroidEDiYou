@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical" >
+
+        <include layout="@layout/common_title_bar" />
+
+        <FrameLayout
+            android:layout_width="fill_parent"
+            android:layout_height="120dp"
+            android:layout_margin="10dp"
+            android:orientation="vertical" >
+
+            <LinearLayout
+                android:id="@+id/llWarnAddNewPhoto"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_gravity="center"
+                android:background="@color/pall_bg_gray"
+                android:gravity="center"
+                android:onClick="true"
+                android:orientation="vertical" >
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/bg_image_default" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:text="添加推荐主题图" />
+            </LinearLayout>
+
+            <ImageView
+                android:id="@+id/ivNewPhoto"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:src="@drawable/bg_image_default"
+                android:visibility="gone" />
+        </FrameLayout>
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:background="@drawable/bg_describe"
+            android:orientation="vertical" >
+
+            <EditText
+                android:id="@+id/edtTitleName"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:background="@null"
+                android:hint="请填写名称"
+                android:textColorHint="@color/hint_gray"
+                android:padding="8dp"
+                android:selectAllOnFocus="true"
+                android:singleLine="true" />
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="1dp"
+                android:background="@drawable/koala_horizontal_line" />
+
+            <EditText
+                android:id="@+id/edtContent"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:background="@null"
+                android:hint="请填写描述"
+                android:textColorHint="@color/hint_gray"
+                android:padding="8dp"
+                android:singleLine="true" />
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/btnNewRecommend"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right"
+            android:layout_marginRight="10dp"
+            android:background="@drawable/bg_btn_selector"
+            android:text="创建"
+            android:textColor="@color/order_green_color" />
+
+        <com.elephant.ediyou.view.GridViewInScrollView
+            android:id="@+id/gvReCommendPhoto"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:cacheColorHint="@android:color/transparent"
+            android:horizontalSpacing="5dp"
+            android:listSelector="@android:color/transparent"
+            android:numColumns="4"
+            android:paddingTop="5dp"
+            android:verticalSpacing="5dp" >
+        </com.elephant.ediyou.view.GridViewInScrollView>
+    </LinearLayout>
+
+</ScrollView>

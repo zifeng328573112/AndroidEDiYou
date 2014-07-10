@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:clickable="true" >
+
+    <com.elephant.ediyou.view.ScrollViewIncludeViewPager
+        android:id="@+id/svivHome"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:scrollbars="none" >
+
+        <LinearLayout
+            android:id="@+id/llHome"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <FrameLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@color/bg_nor"
+                android:padding="5dp" >
+
+                <android.support.v4.view.ViewPager
+                    android:id="@+id/viewPagerHomeEvent"
+                    android:layout_width="fill_parent"
+                    android:layout_height="128dp"
+                    android:focusable="true"
+                    android:focusableInTouchMode="true" />
+
+                <RadioGroup
+                    android:id="@+id/groupPoint"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="bottom|right"
+                    android:layout_marginBottom="6dp"
+                    android:layout_marginRight="6dp"
+                    android:orientation="horizontal" >
+                </RadioGroup>
+            </FrameLayout>
+
+            <FrameLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content" >
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical" >
+
+                    <com.elephant.ediyou.view.GridViewInScrollView
+                        android:id="@+id/gvHomeTopRooShow"
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:background="@drawable/bg_top_roo_tile"
+                        android:cacheColorHint="@android:color/transparent"
+                        android:focusable="false"
+                        android:focusableInTouchMode="false"
+                        android:horizontalSpacing="5dp"
+                        android:listSelector="@android:color/transparent"
+                        android:numColumns="3"
+                        android:paddingBottom="10dp"
+                        android:paddingLeft="5dp"
+                        android:paddingRight="5dp"
+                        android:paddingTop="10dp"
+                        android:scrollbars="none"
+                        android:stretchMode="columnWidth"
+                        android:verticalSpacing="5dp" >
+                    </com.elephant.ediyou.view.GridViewInScrollView>
+
+                    <com.elephant.ediyou.view.GridViewInScrollView
+                        android:id="@+id/gvHomeRooShow"
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:background="@color/bg_nor"
+                        android:cacheColorHint="@android:color/transparent"
+                        android:focusable="false"
+                        android:focusableInTouchMode="false"
+                        android:horizontalSpacing="5dp"
+                        android:listSelector="@android:color/transparent"
+                        android:numColumns="3"
+                        android:padding="5dp"
+                        android:scrollbars="none"
+                        android:stretchMode="columnWidth"
+                        android:verticalSpacing="5dp" >
+                    </com.elephant.ediyou.view.GridViewInScrollView>
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/tvShowNo"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_margin="10dp"
+                    android:background="@drawable/bg_describe"
+                    android:gravity="center"
+                    android:textColor="@color/text_grey"
+                    android:textSize="14sp"
+                    android:visibility="gone" />
+            </FrameLayout>
+        </LinearLayout>
+    </com.elephant.ediyou.view.ScrollViewIncludeViewPager>
+
+    <!-- 底部图片按钮点击状态 -->
+
+    <RelativeLayout
+        android:id="@+id/rlFunction"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|center" >
+
+        <ImageView
+            android:id="@+id/ivCenterBottom"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:clickable="false"
+            android:src="@drawable/ic_home_foot_kaola"
+            android:visibility="invisible" />
+
+        <ImageView
+            android:id="@+id/ivFunctionOrders"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@id/ivCenterBottom"
+            android:layout_marginBottom="-40dp"
+            android:layout_marginRight="-12dp"
+            android:layout_toLeftOf="@id/ivCenterBottom"
+            android:clickable="true"
+            android:src="@drawable/ic_home_foot_order"
+            android:visibility="gone" />
+
+        <ImageView
+            android:id="@+id/ivFunctionMyhome"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@id/ivCenterBottom"
+            android:layout_marginBottom="-6dp"
+            android:layout_marginRight="-51dp"
+            android:layout_toLeftOf="@id/ivCenterBottom"
+            android:src="@drawable/ic_home_foot_find"
+            android:visibility="gone" />
+
+        <ImageView
+            android:id="@+id/ivFunctionEvent"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@id/ivCenterBottom"
+            android:layout_marginBottom="-6dp"
+            android:layout_marginLeft="-51dp"
+            android:layout_toRightOf="@id/ivCenterBottom"
+            android:clickable="true"
+            android:src="@drawable/ic_home_foot_event"
+            android:visibility="gone" />
+
+        <ImageView
+            android:id="@+id/ivFunctionMsg"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@id/ivCenterBottom"
+            android:layout_marginBottom="-40dp"
+            android:layout_marginLeft="-12dp"
+            android:layout_toRightOf="@id/ivCenterBottom"
+            android:clickable="true"
+            android:src="@drawable/ic_home_foot_msg"
+            android:visibility="gone" />
+    </RelativeLayout>
+
+</FrameLayout>

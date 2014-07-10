@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">E地游</string>
+    <string name="account_bind">帐号绑定</string>
+    <string name="account_bind_success">绑定成功</string>
+    <string name="unbind">解除绑定</string>
+    <string name="unbind_promt">您确定解除绑定吗?</string>
+    <string name="weibo_content_is_empty">内容不能为空!</string>
+    <string name="weibo_content_too_long">内容不能超过140个中文!</string>
+    <string name="weibo_auth_faild">认证失败,请重新认证.</string>
+    <string name="weibo_repeat_content">相同内容请间隔10分钟再进行发布哦!</string>
+    <string name="weibo_bind_faild">绑定失败</string>
+    <string name="weibo_over_the_unaudited">未审核的应用使用人数超过限制</string>
+    <string name="loading">正在加载...</string>
+    <string name="load_more">获取更多</string>
+    <string name="load_all">全部加载完毕</string>
+    <string name="NoSignalException">无法连接到网络，请检查网络配置</string>
+    <string name="ok">确定</string>
+    <string name="cancel">取消</string>
+    <string name="back">返回</string>
+    <string name="next_step">下一步</string>
+    <string name="publish">正在发送…</string>
+    <string name="publish_fail">发布失败</string>
+    <string name="publish_success">发布成功</string>
+    <string name="weibo_repost">转发</string>
+    <string name="time_out">登录超时，请重新登录</string>
+    <string name="no_login">您还未登录，请登录后使用该功能</string>
+
+    <!-- title -->
+    <string name="koala_profile">考拉详情</string>
+    <string name="roo_profile">袋鼠详情</string>
+    <string name="roo_order">预约时间</string>
+    <string name="roo_appointment_confirm">预约确认</string>
+    <string name="roo_appointment_location">预约地点 </string>
+    <!-- Button -->
+    <string name="service">服务</string>
+    <string name="info">信息</string>
+    <string name="activity">活动</string>
+    <string name="photo">照片</string>
+    <string name="recommendation">推荐</string>
+
+    <!-- 考拉和袋鼠的信息 -->
+    <string name="personal_introduce">个人介绍</string>
+    <string name="basic_info">基本信息</string>
+    <string name="detail_info">详细信息</string>
+    <string name="height">身高</string>
+    <string name="weight">体重</string>
+    <string name="area">地区</string>
+    <string name="hobby">爱好</string>
+    <string name="phone">手机</string>
+    <string name="nationality">国籍</string>
+    <string name="race">民族</string>
+    <string name="birthday">生日</string>
+    <string name="constellation">星座</string>
+    <string name="zodiac">属相</string>
+    <string name="faith">信仰</string>
+
+    <!-- 百度地图key -->
+    <string name="map_key">82069EB19267A400E80733137A0A8A4C2B5D6F9A</string>
+    <!-- 订单信息 -->
+    <string name="two_dim_code">二维码确认</string>
+    <string name="confirm_two_dim_code">(请在见面后扫描二维码,确认对方已经赴约)</string>
+    <string name="order_detail">订单详情</string>
+    <string name="use_coupon">使用优惠券</string>
+    <string name="coupon_info">(只有线上支付可以使用免费券,免费券只可抵消一天费用)</string>
+    <string name="get_insure">获取保险</string>
+    <string name="insure_info">(只有在线上支付可以获取保险)</string>
+
+    <!-- prompt -->
+    <string name="order_prompt">友情提示：袋鼠每日的服务时间最多为8小时，最晚为18:00，如果考拉有额外的时间需求，请自行与袋鼠商议加班费。</string>
+    <string name="schedule_prompt">友情提示：一旦将日程设置为空闲，考拉就可以雇佣您，请根据自己的实际情况设置空闲时间，切勿爽约。</string>
+    <string name="event_prompt">友情提示：创建活动的开始时间和结束时间，中间请不要有您忙碌或者雇佣的时间，否则会导致您创建的活动失败。</string>    <string name="access_input">1234567890abcdefghijklmnopqrstuvwxyz”</string>
+    <string-array name="age_section">
+        <item >不限</item>
+        <item >16-26</item>
+        <item >26-36</item>
+        <item >36-46</item>
+        <item >46-56</item>
+        <item >56-66</item>
+    </string-array>
+    <string-array name="goo_grade">
+        <item >不限</item>
+        <item >1</item>
+        <item >2</item>
+        <item >3</item>
+        <item >4</item>
+        <item >5</item>
+        <item >6</item>
+    </string-array>
+    <string-array name="service_grade">
+        <item >不限</item>
+        <item >1</item>
+        <item >2</item>
+        <item >3</item>
+        <item >4</item>
+        <item >5</item>
+        <item >6</item>
+    </string-array>
+    <string name="help_info">
+Q：什么是考拉与袋鼠？\n
+A：考拉，自由行和商旅及本地自由行用户；
+袋鼠，旅行目的地可信任的人，能做考拉在当地的向导，可以提供当地的、非大众化的、特色的、 原生态服务的用户\n
+\nQ：考拉能做什么？\n
+A：考拉可以在前往目的地前，预约一名袋鼠作为向导；也可以查看目的地是否有袋鼠正在举办活动，然后报名参加。当考拉按照约定的时间前往目的地后，即可在袋鼠的帮助下，享受丰富多彩的旅行。\n
+\nQ：如何成为袋鼠？\n
+A：进入个人中心，点击“申请成为袋鼠”选项，通过其中的所有认证，重新登录帐号后即可成为袋鼠。\n
+\nQ：袋鼠能做什么？\n
+A：完善自己的服务信息，设置自己的日程安排，然后等待考拉预约您吧。或者您也可以通过活动管理创建一场活动，等待考拉们的报名。\n
+\nQ：我成为了袋鼠，如果我要外出旅行，是否可以预约别的袋鼠？\n
+A：可以，即使用户成为了袋鼠，仍然保留了考拉的功能，袋鼠相当于高级的考拉。\n</string>
+<string name="about">一般自助游及自由行的群体是年轻人，他们崇尚个性；喜欢自助、自驾、背包旅游，不愿跟团受拘束；对新事物好奇，喜欢接 受新体验；偏爱省时、省力的互联网网上消费……“E地游”正是针对个性十足的目标群，满足用户的诸多个性化需求，得到他们的喜爱和信任。
+    
+</string>
+</resources>

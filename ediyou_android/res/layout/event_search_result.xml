@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/bg_nor"
+    android:orientation="vertical" >
+
+    <include layout="@layout/common_title_bar" />
+
+    <LinearLayout
+        android:id="@+id/llSearchResultNum"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="共搜索到"
+            android:textColor="@color/text_grey"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/tvSearchResultNum"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="15dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="场活动"
+            android:textColor="@color/text_grey"
+            android:textSize="14sp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/llSearchResultNothing"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical" >
+
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_margin="10dp"
+            android:background="@drawable/bg_describe"
+            android:gravity="center"
+            android:text="没有符合您要求的搜索结果哦"
+            android:textColor="@color/text_grey"
+            android:textSize="14sp" />
+    </LinearLayout>
+
+    <FrameLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_gravity="top" >
+
+        <GridView
+            android:id="@+id/gvSearchResultList"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@color/bg_nor"
+            android:cacheColorHint="@android:color/transparent"
+            android:columnWidth="95dp"
+            android:gravity="center"
+            android:horizontalSpacing="3dp"
+            android:listSelector="@android:color/transparent"
+            android:numColumns="2"
+            android:stretchMode="columnWidth"
+            android:verticalSpacing="6dp" />
+    </FrameLayout>
+
+</LinearLayout>

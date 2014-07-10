@@ -1,0 +1,261 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="#EAE9E2"
+    android:orientation="vertical" >
+
+    <include layout="@layout/common_title_bar" />
+    
+    <ScrollView
+            android:id="@+id/svPrepaid"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:scrollbars="none">
+            
+	    <LinearLayout 
+	        android:layout_width="fill_parent"
+	        android:layout_height="fill_parent"
+	        android:orientation="vertical"
+	        android:padding="10dp"
+	        android:gravity="center_horizontal" >
+	        
+	        <LinearLayout 
+	            android:layout_width="fill_parent"
+	            android:layout_height="wrap_content"
+	            android:orientation="horizontal"
+	            android:gravity="center_vertical"
+	            android:background="@drawable/bg_describe">
+	            
+	            <TextView 
+	                android:layout_width="wrap_content"
+	                android:layout_height="wrap_content"
+	                android:text="扣款帐户余额:"/>
+	            <TextView
+	                android:id="@+id/tvAccountBalance" 
+	                android:layout_width="wrap_content"
+	                android:layout_height="wrap_content"
+	                android:text="1700"/>
+	            <TextView 
+	                android:layout_width="wrap_content"
+	                android:layout_height="wrap_content"
+	                android:text="元"/>
+	            
+	        </LinearLayout>
+	        
+	        <RadioGroup 
+	            android:id="@+id/rgPrepaidSel"
+	            android:layout_width="fill_parent"
+	            android:layout_height="wrap_content">
+	            
+	            <RadioButton 
+	                android:id="@+id/rbPrepaidUseBank"
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:checked="true"
+					android:text="网银充值"
+					android:textSize="15dp"
+					android:layout_weight="1"
+					android:gravity="center"
+					android:tag="1"
+					android:button="@drawable/btn_square_seletor"/>
+	            
+	            <LinearLayout 
+	                android:id="@+id/llPrepaidUseBank"
+	                android:layout_width="fill_parent"
+	                android:layout_height="wrap_content"
+	                android:orientation="vertical"
+	                android:background="@drawable/bg_describe">
+	                
+	                <LinearLayout 
+	                    android:layout_width="wrap_content"
+	                    android:layout_height="wrap_content"
+	                    android:gravity="center_vertical"
+	                    android:paddingLeft="5dp"
+	                    android:paddingRight="5dp"
+	                    android:orientation="horizontal">
+	                    
+	                    <TextView 
+	                        android:layout_width="wrap_content"
+	                        android:layout_height="wrap_content"
+	                        android:text="确认充值金额:"/>
+	                    <EditText 
+	                        android:id="@+id/etAmountConfirm"
+	                        android:layout_width="150dp"
+	                        android:layout_height="30dp"
+	                        android:layout_marginLeft="5dp"
+	                        android:layout_marginRight="5dp"
+	                        android:background="@drawable/bg_edit"/>
+	                    <TextView 
+	                        android:layout_width="wrap_content"
+	                        android:layout_height="wrap_content"
+	                        android:text="元"/>
+	                </LinearLayout>
+	                
+	                <ImageView 
+		                android:layout_width="fill_parent"
+		                android:layout_height="wrap_content"
+		                android:layout_marginTop="5dp"
+		                android:background="@drawable/layer_line"/>
+	                
+                    <RadioGroup 
+                        android:id="@+id/rgBankSelLine1"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+                        
+                        <RadioButton 
+                            android:id="@+id/rbBankSelZhiFuBao"
+							android:layout_width="wrap_content"
+							android:layout_height="wrap_content"
+							android:checked="true"
+							android:textSize="13dp"
+							android:layout_weight="1"
+							android:gravity="center"
+							android:paddingTop="5dp"
+							android:paddingBottom="5dp"
+							android:tag="#1"
+							android:background="@drawable/bg_radiobtn_prepaid_zfb"
+							android:layout_marginLeft="5dp"
+							android:layout_marginRight="5dp"
+							android:button="@null"/>
+                        
+                        <RadioButton 
+							android:layout_width="wrap_content"
+							android:layout_height="wrap_content"
+							android:checked="false"
+							android:textSize="13dp"
+							android:layout_weight="1"
+							android:gravity="center"
+							android:paddingTop="5dp"
+							android:paddingBottom="5dp"
+							android:tag="2"
+							android:background="@drawable/bg_radiobtn_prepaid_zfb"
+							android:layout_marginLeft="5dp"
+							android:layout_marginRight="5dp"
+							android:visibility="invisible"
+							android:button="@null"/>
+                    </RadioGroup>
+	                    
+                    <RadioGroup 
+                        android:id="@+id/rgBankSelLine2"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_horizontal"
+                        android:visibility="gone"
+                        android:orientation="horizontal">
+                        
+                        <RadioButton 
+							android:layout_width="wrap_content"
+							android:layout_height="wrap_content"
+							android:checked="false"
+							android:textSize="13dp"
+							android:layout_weight="1"
+							android:gravity="center"
+							android:paddingTop="5dp"
+							android:paddingBottom="5dp"
+							android:tag="3"
+							android:background="@drawable/bg_radiobtn_prepaid_zfb"
+							android:layout_marginLeft="5dp"
+							android:layout_marginRight="5dp"
+							android:visibility="invisible"
+							android:button="@null"/>
+                        
+                        <RadioButton 
+							android:layout_width="wrap_content"
+							android:layout_height="wrap_content"
+							android:checked="false"
+							android:textSize="13dp"
+							android:layout_weight="1"
+							android:gravity="center"
+							android:paddingTop="5dp"
+							android:paddingBottom="5dp"
+							android:tag="4"
+							android:background="@drawable/bg_radiobtn_prepaid_zfb"
+							android:layout_marginLeft="5dp"
+							android:layout_marginRight="5dp"
+							android:visibility="invisible"
+							android:button="@null"/>
+                    </RadioGroup>
+                    
+                    <RadioGroup 
+                        android:id="@+id/rgBankSelLine3"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_horizontal"
+                        android:visibility="gone"
+                        android:orientation="horizontal">
+                        
+                        <RadioButton 
+							android:layout_width="wrap_content"
+							android:layout_height="wrap_content"
+							android:checked="false"
+							android:textSize="13dp"
+							android:layout_weight="1"
+							android:gravity="center"
+							android:paddingTop="5dp"
+							android:paddingBottom="5dp"
+							android:tag="5"
+							android:background="@drawable/bg_radiobtn_prepaid_zfb"
+							android:layout_marginLeft="5dp"
+							android:layout_marginRight="5dp"
+							android:visibility="invisible"
+							android:button="@null"/>
+                        
+                        <RadioButton 
+							android:layout_width="wrap_content"
+							android:layout_height="wrap_content"
+							android:checked="false"
+							android:textSize="13dp"
+							android:layout_weight="1"
+							android:gravity="center"
+							android:paddingTop="5dp"
+							android:paddingBottom="5dp"
+							android:tag="6"
+							android:background="@drawable/bg_radiobtn_prepaid_zfb"
+							android:layout_marginLeft="5dp"
+							android:layout_marginRight="5dp"
+							android:visibility="invisible"
+							android:button="@null"/>
+                    </RadioGroup>
+	            </LinearLayout>
+
+	            <RadioButton 
+	                android:id="@+id/rbPrepaidUseVoutch"
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:checked="false"
+					android:text="充入代金券"
+					android:textSize="15dp"
+					android:layout_weight="1"
+					android:gravity="center"
+					android:tag="2"
+					android:button="@drawable/btn_square_seletor"/>
+	            
+	            <LinearLayout 
+	                android:layout_width="fill_parent"
+	                android:layout_height="wrap_content"
+	                android:gravity="center"
+	                android:padding="10dp"
+	                android:background="@drawable/bg_describe">
+	                <EditText 
+	                    android:id="@+id/etInputVoutchCode"
+	                    android:layout_width="fill_parent"
+	                    android:layout_height="30dp"
+	                    android:layout_marginLeft="5dp"
+	                    android:layout_marginRight="5dp"
+	                    android:background="@drawable/bg_edit"/>
+	            </LinearLayout>
+	            
+	            <Button 
+	                android:id="@+id/btnPrepaidConfirm"
+	                android:layout_width="150dp"
+	                android:layout_height="50dp"
+	                android:layout_gravity="center_horizontal"
+	                android:text="确认充值"
+	                android:textSize="20dp"
+	                android:background="@drawable/bg_btn_selector"/>
+	        </RadioGroup>
+	    </LinearLayout>
+	</ScrollView>
+</LinearLayout>

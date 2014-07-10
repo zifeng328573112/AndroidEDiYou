@@ -1,0 +1,273 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_repeat"
+    android:orientation="vertical" >
+
+    <include layout="@layout/common_title_bar" />
+
+    <ScrollView
+        android:id="@+id/myScrollView"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:scrollbars="none" >
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" >
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="180dp"
+                    android:orientation="vertical" >
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="140dp" >
+
+                        <ImageView   
+                            android:id="@+id/ivBg"
+                            android:layout_width="match_parent"
+                            android:layout_height="fill_parent"
+                            android:focusable="true"
+                            android:focusableInTouchMode="true"
+                            android:scaleType="fitXY"
+                            android:src="@drawable/roo_bg" />
+
+                        <LinearLayout
+                            android:layout_width="fill_parent"
+                            android:layout_height="fill_parent"
+                            android:background="@drawable/koala_roo_shadow" />
+                    </RelativeLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="55dp"
+                        android:background="@drawable/bg_profile_info_line_repeat" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="bottom"
+                    android:layout_marginBottom="15dp"
+                    android:orientation="horizontal" >
+
+                    <ImageView
+                        android:id="@id/ivPortrait"
+                        android:layout_width="80dp"
+                        android:layout_height="80dp"
+                        android:layout_marginLeft="15dp"
+                        android:layout_marginRight="10dp"
+                        android:background="@drawable/bg_photo"
+                        android:scaleType="fitCenter" />
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="80dp"
+                        android:layout_weight="1"
+                        android:orientation="vertical" >
+
+                        <RelativeLayout
+                            android:layout_width="fill_parent"
+                            android:layout_height="0dp"
+                            android:layout_weight="1" >
+
+                            <TextView
+                                android:id="@id/tvEmail"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="abc@ediyou.com"
+                                android:textColor="@android:color/white"
+                                android:textSize="16sp" />
+
+                            <FrameLayout
+                                android:id="@+id/viewNickName"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentBottom="true"
+                                android:layout_alignTop="@id/ivContact"
+                                android:layout_below="@id/tvEmail" >
+
+                                <TextView
+                                    android:id="@id/tvName"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center_vertical"
+                                    android:gravity="center"
+                                    android:text="执着的鱼"
+                                    android:textColor="@android:color/white"
+                                    android:textSize="16sp" />
+
+                                <EditText
+                                    android:id="@id/etName"
+                                    android:layout_width="110dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_below="@id/tvEmail"
+                                    android:layout_gravity="center_vertical"
+                                    android:background="@drawable/bg_edit"
+                                    android:gravity="center"
+                                    android:text="执着的鱼"
+                                    android:textColor="#A0A0A0"
+                                    android:textSize="16sp"
+                                    android:visibility="gone"
+                                    android:maxLength="20" />
+                            </FrameLayout>
+
+                            <Button
+                                android:id="@+id/btnNameEdit"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentBottom="true"
+                                android:layout_alignTop="@id/viewNickName"
+                                android:layout_marginLeft="15dp"
+                                android:layout_marginRight="10dp"
+                                android:layout_toRightOf="@id/viewNickName"
+                                android:background="@drawable/btn_edit_selector" />
+
+                            <ImageView
+                                android:id="@id/ivContact"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentBottom="true"
+                                android:layout_centerVertical="true"
+                                android:layout_marginRight="10dp"
+                                android:layout_toLeftOf="@id/ivBlackList"
+                                android:src="@drawable/ic_contact" />
+
+                            <ImageView
+                                android:id="@id/ivBlackList"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentBottom="true"
+                                android:layout_alignParentRight="true"
+                                android:layout_centerVertical="true"
+                                android:layout_marginRight="10dp"
+                                android:src="@drawable/ic_black_list_nor" />
+                        </RelativeLayout>
+
+                        <LinearLayout
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="5dp"
+                            android:gravity="center_vertical"
+                            android:orientation="horizontal" >
+
+                            <ImageView
+                                android:id="@id/ivGender"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginRight="3dp"
+                                android:src="@drawable/ic_fale" />
+
+                            <TextView
+                                android:id="@id/tvAge"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginRight="3dp"
+                                android:text="21岁"
+                                android:textSize="12sp" />
+
+                            <ImageView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginRight="3dp"
+                                android:src="@drawable/ic_roo" />
+
+                            <TextView
+                                android:id="@id/tvLevel"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginRight="3dp"
+                                android:background="@drawable/bg_level"
+                                android:gravity="center"
+                                android:text="LV38"
+                                android:textColor="@color/text_grey"
+                                android:textSize="10sp" />
+
+                            <TextView
+                                android:id="@id/tvBadge"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginRight="3dp"
+                                android:background="@drawable/bg_badge"
+                                android:gravity="center"
+                                android:text="12"
+                                android:textColor="@color/text_grey"
+                                android:textSize="8sp" />
+                        </LinearLayout>
+                    </LinearLayout>
+                </LinearLayout>
+            </FrameLayout>
+
+            <TabHost
+                android:id="@android:id/tabhost"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent" >
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:orientation="vertical" >
+
+                    <TabWidget
+                        android:id="@android:id/tabs"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.0"
+                        android:visibility="gone" />
+
+                    <RadioGroup
+                        android:id="@+id/radiogp_main"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="top"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal" >
+
+                        <RadioButton
+                            android:id="@+id/radio_info"
+                            style="@style/main_tab_bottom"
+                            android:drawableTop="@drawable/ic_profile_info_selector"
+                            android:text="@string/service"
+                            android:textSize="14sp" />
+
+                        <RadioButton
+                            android:id="@+id/radio_event"
+                            style="@style/main_tab_bottom"
+                            android:drawableTop="@drawable/ic_parti_event_selector"
+                            android:text="@string/activity"
+                            android:textSize="14sp" />
+
+                        <RadioButton
+                            android:id="@+id/radio_photo"
+                            style="@style/main_tab_bottom"
+                            android:drawableTop="@drawable/ic_profile_photo_selector"
+                            android:text="@string/photo"
+                            android:textSize="14sp" />
+
+                        <RadioButton
+                            android:id="@+id/radio_recom"
+                            style="@style/main_tab_bottom"
+                            android:drawableTop="@drawable/ic_recom_selector"
+                            android:text="@string/recommendation"
+                            android:textSize="14sp" />
+                    </RadioGroup>
+
+                    <FrameLayout
+                        android:id="@android:id/tabcontent"
+                        android:layout_width="fill_parent"
+                        android:layout_height="0.0dip"
+                        android:layout_weight="1.0" />
+                </LinearLayout>
+            </TabHost>
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

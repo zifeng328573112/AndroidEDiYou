@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+<!-- 已停止使用该瀑布流 -->
+    <com.elephant.ediyou.view.LazyScrollView
+        android:id="@+id/scroll_photo"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:scrollbars="vertical"
+        >
+        <LinearLayout 
+            android:id="@+id/llRooRecommentPhotoList"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            >
+        </LinearLayout>
+	</com.elephant.ediyou.view.LazyScrollView>
+</LinearLayout>

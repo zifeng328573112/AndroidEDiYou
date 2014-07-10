@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:padding="5dp" >
+
+    <FrameLayout 
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+	    <ImageView
+            android:id="@+id/ivUserPhoto"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:background="@drawable/bg_photo"
+            android:scaleType="fitCenter"
+            android:src="@drawable/ic_launcher" />
+	    <ImageView
+            android:id="@+id/ivIsRead"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="50dp"
+            android:layout_marginTop="65dp"
+            android:visibility="visible"
+            android:src="@drawable/msg_unread" />
+	</FrameLayout>
+    
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="5dp"
+        android:orientation="vertical" 
+        android:gravity="center_vertical"
+        >
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:id="@+id/tvTitle"
+                android:layout_width="300dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:paddingTop="5dp"
+                android:paddingBottom="5dp"
+                android:singleLine="true"
+                android:text="杭州西湖一日"
+                android:textSize="20.0sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tvCreateTime"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:paddingRight="5dp"
+                android:text="12-12-02 10:22"
+                android:textColor="@color/setting_item_font_nor"
+                android:textSize="12.0sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:id="@+id/tvContent"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingTop="5dp"
+                android:singleLine="true"
+                android:text="XXX"
+                android:textSize="14.0sp" />
+        </LinearLayout>
+
+	        
+    </LinearLayout>
+
+</LinearLayout>

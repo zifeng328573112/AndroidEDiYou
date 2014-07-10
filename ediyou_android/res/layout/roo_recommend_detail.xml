@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical" >
+
+        <include layout="@layout/common_title_bar" />
+
+        <LinearLayout
+            android:id="@+id/llTitle"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:background="@android:color/white"
+            android:orientation="vertical"
+            android:padding="10dp" >
+
+            <ImageView
+                android:id="@+id/ivRooRecommentDCover"
+                android:layout_width="fill_parent"
+                android:layout_height="128dp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/view" />
+
+            <RelativeLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content" >
+
+                <FrameLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" >
+
+                    <TextView
+                        android:id="@+id/tvRooRecommentDTitleName"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="丽江古城"
+                        android:textSize="22sp" />
+
+                    <EditText
+                        android:id="@+id/edtDTitleName"
+                        android:layout_width="160dp"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/bg_edit"
+                        android:textColor="#A0A0A0"
+                        android:textSize="20sp"
+                        android:singleLine="true"
+                        android:visibility="gone" />
+                </FrameLayout>
+
+                <Button
+                    android:id="@+id/btnEditDetail"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:background="@drawable/btn_edit_selector" />
+            </RelativeLayout>
+
+            <FrameLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content" >
+
+                <TextView
+                    android:id="@+id/tvRooRecommentDContent"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:text="        丽江地处滇西北高原，金沙江中游。以“二山、一城、一湖、一江、一文化、一风情”为主要代表。"
+                    android:textSize="18sp" />
+
+                <EditText
+                    android:id="@+id/edtDContent"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/bg_edit"
+                    android:textColor="#A0A0A0"
+                    android:textSize="16sp"
+                    android:visibility="gone" />
+
+            </FrameLayout>
+        </LinearLayout>
+
+        <ImageView
+            android:layout_width="fill_parent"
+            android:layout_height="1dp"
+            android:background="@drawable/koala_horizontal_line" />
+
+        <com.elephant.ediyou.view.GridViewInScrollView
+            android:id="@+id/gvPhoto"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            android:cacheColorHint="@android:color/transparent"
+            android:horizontalSpacing="10dp"
+            android:listSelector="@android:color/transparent"
+            android:numColumns="3"
+            android:paddingTop="10dp"
+            android:verticalSpacing="10dp" >
+        </com.elephant.ediyou.view.GridViewInScrollView>
+
+        <include layout="@layout/footer" />
+    </LinearLayout>
+
+</ScrollView>

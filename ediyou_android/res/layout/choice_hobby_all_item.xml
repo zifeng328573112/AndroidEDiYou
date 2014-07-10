@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="@drawable/bg_hobby_all_selector"
+    android:orientation="vertical" >
+
+    <TextView
+        android:id="@+id/tvAllHobby"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:shadowColor="@android:color/darker_gray"
+        android:shadowDx="0.5"
+        android:shadowDy="0.5"
+        android:shadowRadius="0.3"
+        android:text="旅游"
+        android:textColor="@color/black_gray"
+        android:textSize="14sp" />
+
+</LinearLayout>

@@ -1,0 +1,311 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/bg_nor"
+    android:clickable="true" >
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="top"
+        android:orientation="vertical" >
+
+        <include layout="@layout/common_title_bar" />
+
+        <ScrollView
+            android:id="@+id/svivSearch"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:scrollbars="none" >
+
+            <LinearLayout
+                android:id="@+id/llSearch"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="3dp"
+                    android:text="地点"
+                    android:textColor="#C6BA91"
+                    android:textSize="16dp"
+                    android:textStyle="bold" />
+
+                <RelativeLayout
+                    android:id="@+id/rlChoiceOtherLocation"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/bg_describe"
+                    android:clickable="true"
+                    android:padding="7dp" >
+
+                    <TextView
+                        android:id="@+id/tvOtherLocation"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_centerVertical="true"
+                        android:text="上海 上海市"
+                        android:textSize="16dp" />
+
+                    <ImageView
+                        android:id="@+id/ivSelectLocation"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="5dp"
+                        android:src="@drawable/ic_item_more" />
+                </RelativeLayout>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="3dp"
+                    android:layout_marginTop="5dp"
+                    android:text="空闲状况"
+                    android:textColor="#C6BA91"
+                    android:textSize="16dp"
+                    android:textStyle="bold" />
+
+                <RadioGroup
+                    android:id="@+id/rgFreeState"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:layout_marginTop="2dp"
+                    android:orientation="horizontal"
+                    android:padding="3dp" >
+
+                    <RadioButton
+                        android:id="@+id/rbFreeStateAll"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:background="@drawable/bg_radiobtn_fillet"
+                        android:button="@null"
+                        android:checked="true"
+                        android:gravity="center"
+                        android:padding="10dp"
+                        android:tag="0"
+                        android:text="不限"
+                        android:textColor="#A1BE7F"
+                        android:textSize="15dp" />
+
+                    <RadioButton
+                        android:id="@+id/rbFreeState2Day"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:background="@drawable/bg_radiobtn_fillet"
+                        android:button="@null"
+                        android:checked="false"
+                        android:gravity="center"
+                        android:padding="10dp"
+                        android:tag="2"
+                        android:text="2天内"
+                        android:textColor="#9C9B9B"
+                        android:textSize="15dp" />
+
+                    <RadioButton
+                        android:id="@+id/rbFreeState1Week"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:background="@drawable/bg_radiobtn_fillet"
+                        android:button="@null"
+                        android:checked="false"
+                        android:gravity="center"
+                        android:padding="10dp"
+                        android:tag="7"
+                        android:text="1周内"
+                        android:textColor="#9C9B9B"
+                        android:textSize="15dp" />
+
+                    <RadioButton
+                        android:id="@+id/rbFreeState1Month"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:background="@drawable/bg_radiobtn_fillet"
+                        android:button="@null"
+                        android:checked="false"
+                        android:gravity="center"
+                        android:padding="10dp"
+                        android:tag="30"
+                        android:text="1月内"
+                        android:textColor="#9C9B9B"
+                        android:textSize="15dp" />
+                </RadioGroup>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="3dp"
+                    android:layout_marginTop="5dp"
+                    android:text="性别"
+                    android:textColor="#C6BA91"
+                    android:textSize="16dp"
+                    android:textStyle="bold" />
+
+                <RadioGroup
+                    android:id="@+id/rgSex"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:layout_marginTop="2dp"
+                    android:orientation="horizontal"
+                    android:padding="3dp" >
+
+                    <RadioButton
+                        android:id="@+id/rbSexAll"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:background="@drawable/bg_radiobtn_fillet"
+                        android:button="@null"
+                        android:checked="true"
+                        android:gravity="center"
+                        android:padding="10dp"
+                        android:tag="a"
+                        android:text="全部"
+                        android:textColor="#A1BE7F"
+                        android:textSize="15dp" />
+
+                    <RadioButton
+                        android:id="@+id/rbSexMale"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:background="@drawable/bg_radiobtn_fillet"
+                        android:button="@null"
+                        android:checked="false"
+                        android:drawableLeft="@drawable/ic_male"
+                        android:gravity="center"
+                        android:padding="10dp"
+                        android:tag="m"
+                        android:text="男生"
+                        android:textColor="#9C9B9B"
+                        android:textSize="15dp" />
+
+                    <RadioButton
+                        android:id="@+id/rbSexFamin"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:background="@drawable/bg_radiobtn_fillet"
+                        android:button="@null"
+                        android:checked="false"
+                        android:drawableLeft="@drawable/ic_fale"
+                        android:gravity="center"
+                        android:padding="10dp"
+                        android:tag="f"
+                        android:text="女生"
+                        android:textColor="#9C9B9B"
+                        android:textSize="15dp" />
+                </RadioGroup>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="3dp"
+                    android:layout_marginTop="10dp"
+                    android:text="年龄区间"
+                    android:textColor="#C6BA91"
+                    android:textSize="16dp"
+                    android:textStyle="bold" />
+
+                <FrameLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp" >
+
+                    <Spinner
+                        android:id="@+id/spinnerAgeSection"
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:background="@drawable/bg_describe"
+                        android:entries="@array/age_section"
+                        android:gravity="center_vertical"
+                        android:paddingLeft="10dp" />
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="right|center_vertical"
+                        android:layout_marginRight="5dp"
+                        android:background="@drawable/ic_item_more" />
+                </FrameLayout>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="3dp"
+                    android:layout_marginTop="10dp"
+                    android:text="袋鼠等级"
+                    android:textColor="#C6BA91"
+                    android:textSize="16dp"
+                    android:textStyle="bold" />
+
+                <FrameLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp" >
+
+                    <Spinner
+                        android:id="@+id/spinnerGooGrade"
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:background="@drawable/bg_describe"
+                        android:entries="@array/goo_grade"
+                        android:gravity="center_vertical"
+                        android:paddingLeft="10dp" />
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="right|center_vertical"
+                        android:layout_marginRight="5dp"
+                        android:background="@drawable/ic_item_more" />
+                </FrameLayout>
+
+                
+                <!-- 服务等级已去除 -->
+               <!--  <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="3dp"
+                    android:layout_marginTop="10dp"
+                    android:text="服务等级"
+                    android:textColor="#C6BA91"
+                    android:textSize="16dp"
+                    android:textStyle="bold" />
+
+                <FrameLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp" >
+
+                    <Spinner
+                        android:id="@+id/spinnerServiceGrade"
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:background="@drawable/bg_describe"
+                        android:entries="@array/service_grade"
+                        android:gravity="center_vertical"
+                        android:paddingLeft="10dp" />
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="right|center_vertical"
+                        android:layout_marginRight="5dp"
+                        android:background="@drawable/ic_item_more" />
+                </FrameLayout> -->
+            </LinearLayout>
+        </ScrollView>
+    </LinearLayout>
+
+</FrameLayout>

@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="#EAE9E2"
+    android:orientation="vertical" >
+
+    <include layout="@layout/common_title_bar" />
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/repeat_blod_slant"
+        android:gravity="center"
+        android:orientation="horizontal" >
+
+        <FrameLayout
+            android:id="@+id/viewTwoDimensionalCode"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/repeat_blod_slant"
+            android:orientation="horizontal" >
+
+            <RelativeLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:background="@drawable/bg_describe"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp" >
+
+                <TextView
+                    android:id="@+id/tvAccountTv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerVertical="true"
+                    android:text="帐户余额: "
+                    android:textSize="15sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/tvAccountBalance"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="10dp"
+                    android:layout_toRightOf="@id/tvAccountTv"
+                    android:text=""
+                    android:textColor="@color/text_red"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_toRightOf="@id/tvAccountBalance"
+                    android:text="元"
+                    android:textSize="15sp" />
+
+                <Button
+                    android:id="@+id/btnAccountPay"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:background="@drawable/bg_btn_selector"
+                    android:gravity="center"
+                    android:paddingLeft="15dp"
+                    android:paddingRight="15dp"
+                    android:text="提现"
+                    android:textColor="@color/text_green"
+                    android:textSize="15sp" />
+            </RelativeLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="3dip"
+                android:layout_gravity="top"
+                android:background="@drawable/repeat_shade_line_up" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="3dip"
+                android:layout_gravity="bottom"
+                android:background="@drawable/repeat_shade_line_down" />
+        </FrameLayout>
+    </LinearLayout>
+
+    <ImageView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/layer_line" />
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:background="@drawable/bg_describe"
+        android:orientation="vertical"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp" >
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="资金总帐:"
+                android:textSize="15sp" />
+
+            <View
+                android:layout_width="wrap_content"
+                android:layout_height="1dp"
+                android:layout_weight="1" />
+
+            <RadioGroup
+                android:id="@+id/rgAccountList"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal" >
+
+                <RadioButton
+                    android:id="@+id/rbAccountIncome"
+                    android:layout_width="80dp"
+                    android:layout_height="30dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/bg_radiobtn_tab"
+                    android:button="@null"
+                    android:checked="true"
+                    android:gravity="center"
+                    android:shadowColor="@android:color/darker_gray"
+                    android:shadowDx="0.5"
+                    android:shadowDy="0.5"
+                    android:text="收入"
+                    android:textColor="@color/text_green"
+                    android:textSize="13dp" />
+
+                <RadioButton
+                    android:id="@+id/rbAccountExpend"
+                    android:layout_width="80dp"
+                    android:layout_height="30dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/bg_radiobtn_tab"
+                    android:button="@null"
+                    android:checked="false"
+                    android:gravity="center"
+                    android:shadowColor="@android:color/darker_gray"
+                    android:shadowDx="0.5"
+                    android:shadowDy="0.5"
+                    android:text="支出"
+                    android:textColor="@color/text_grey"
+                    android:textSize="13dp" />
+            </RadioGroup>
+        </LinearLayout>
+
+        <ImageView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/layer_line" />
+
+        <!-- <include layout="@layout/my_account_item" />
+
+        <ImageView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/layer_line" />
+
+        <include layout="@layout/my_account_item" /> -->
+
+        <ListView
+            android:id="@+id/lvAccountList"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:cacheColorHint="@android:color/transparent"
+            android:divider="@drawable/layer_line"
+            android:dividerHeight="2.0dip"
+            android:fadingEdge="none"
+            android:listSelector="@android:color/transparent"
+            android:scrollbars="none" />
+    </LinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <item type="id" name="tag_first">false</item>
+	<item type="id" name="tag_second">false</item>
+	<item type="id" name="tag_evnetphotobean">false</item>
+	<item type="id" name="tag_personalphotobean">false</item>
+	<item type="id" name="tag_recomendphotobean">false</item>	
+	<!-- iv -->
+	<item type="id" name="ivEdit">false</item>
+	<item type="id" name="ivBlackList">false</item>
+	<item type="id" name="ivPortrait">false</item>
+	<item type="id" name="ivGender">false</item>
+	<item type="id" name="ivContact">false</item>
+	<item type="id" name="ivIdentity">false</item>
+	<item type="id" name="ivTwoDimCode">false</item>
+	<item type="id" name="ivHeadImg">false</item>
+	<item type="id" name="ivSex">false</item>
+	
+	<!-- tv -->
+	<item type="id" name="tvExit">false</item>
+	<item type="id" name="tvEmail">false</item>
+	<item type="id" name="tvName">false</item>
+	<item type="id" name="tvAge">false</item>
+	<item type="id" name="tvlevel">false</item>
+	<item type="id" name="tvBadge">false</item>
+	<item type="id" name="tvOrderNum">false</item>
+	<item type="id" name="tvGenerateDate">false</item>
+	<item type="id" name="tvOrderState">false</item>
+	<item type="id" name="tvServerPrice">false</item>
+	<item type="id" name="tvServerTime">false</item>
+	<item type="id" name="tvServerTotalPrice">false</item>
+	<item type="id" name="tvPlace">false</item>
+	<item type="id" name="tvTel">false</item>
+	<item type="id" name="tvOrderTime">false</item>
+	<item type="id" name="tvOrderPlace">false</item>
+	<item type="id" name="tvServerInfo">false</item>
+	<!-- et -->
+	<item type="id" name="etServerInfo">false</item>
+	
+	<!-- Messages IDs -->
+	  <item type="id" name="auto_focus"/>
+	  <item type="id" name="decode"/>
+	  <item type="id" name="decode_failed"/>
+	  <item type="id" name="decode_succeeded"/>
+	  <item type="id" name="encode_failed"/>
+	  <item type="id" name="encode_succeeded"/>
+	  <item type="id" name="launch_product_query"/>
+	  <item type="id" name="quit"/>
+	  <item type="id" name="restart_preview"/>
+	  <item type="id" name="return_scan_result"/>
+	  <item type="id" name="search_book_contents_failed"/>
+	  <item type="id" name="search_book_contents_succeeded"/>
+	  <!-- btn -->
+	  <item type="id" name="btnHome">false</item>
+	  <item type="id" name="btnEvent">false</item>
+	  <!-- radioButton -->
+	  <item type="id" name="rbMale">false</item>
+	  <item type="id" name="rbFemale">false</item>
+</resources>

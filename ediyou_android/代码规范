@@ -1,0 +1,50 @@
+
+	一、activity的编写规范
+
+1、组件在xml中id的命名规范：组件缩写+组件作用描述。例：用户名输入框的命名：etUsername(et代码EditText,username代表输入框意义)
+2、组件在activity类文件中的命名和1保持一致。例：
+	private EditText etUsername;
+3、每个activity必须实现IBaseActivity接口
+4、网络访问请求使用AsyncTask异步任务进行
+5、遵循java的代码命名规范。
+6、Activity的命名与对应视图XML的命名需要对应。例如：HomeActivity，对应的xml命名就是home.xml
+ 
+ 	二、常量类Constants
+1、一些应用常量在此定义
+2、常量包括：一些类型的定义，在其他程序中不能够出现1 2 3之类的值。
+例如：应用文件存放目录，需要在常量类中定义：
+	/**
+	 * 应用文件存放目录
+	 */
+	public static final String APP_DIR_NAME = "ele4android";
+而不要写死在其他的类文件中。
+
+	三、应用全局变量：CommonApplication
+1、用于缓存一些应用全局变量，各个activity可以共同调用。比如数据库操作对象
+调用方法：
+	DataBaseAdapter dataBaseAdapter = ((CommonApplication)getApplicationContext()).getDbAdapter();
+	
+	四、网络访问业务类：BusinessHelper
+1、一些网络操作方法在此类中添加。
+2、访问系统业务方法，转换成json数据对象，或者业务对象。
+
+	五、数据库操作类：DataBaseAdapter
+1、数据库操作类
+2、定义好数据表名，数据列，数据表创建语句
+3、操作表的方法紧随其后
+
+	六、工具类包：util
+1、AndroidUtil：提供android系统中的一些常用工具方法：获得版本号，手机相关信息等等
+2、DateUtil:日期处理工具类
+3、FileUtil：文件处理工具类
+4、ImageUtil:图片处理工具类
+5、NetUtil:网络判断工具类
+6、SharedPrefUtil:SharedPreferences操作工具类
+7、StringUtil:字符串处理工具类
+
+	7、资源文件命名规范
+1、layout文件命名需要和activity的类前缀一致。
+2、图片文件：图标以ic_为前缀，背景图片以bg_为前缀
+3、色值：存放在color.xml中
+
+

@@ -1,0 +1,195 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.elephant.ediyou"
+    android:versionCode="1"
+    android:versionName="1.0.0 build 0.1.9" >
+
+    <uses-sdk android:minSdkVersion="7" android:targetSdkVersion="10"/>
+	<uses-permission android:name="android.permission.READ_PHONE_STATE"/>
+    <!-- 网络访问权限 -->
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/> 
+    <!-- <uses-permission android:name="android.permission.WRITE_APN_SETTINGS" /> -->
+
+	<uses-permission android:name="android.permission.CHANGE_WIFI_STATE"/>
+	<!-- 定位 -->
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+     <!-- SD卡读写权限 -->
+	<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+	<!--  允许挂载和反挂载文件系统可移动存储 -->
+	<uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS" />
+	<!-- 友盟: 获取用户手机的IMEI，用来唯一的标识用户。(如果您的应用会运行在无法读取IMEI的平板上，我们会将mac地址作为用户的唯一标识，请添加权限： android.permission.ACCESS_WIFI_STATE ) -->
+	<uses-permission android:name="android.permission.READ_PHONE_STATE"/>
+	<uses-permission android:name="android.permission.READ_LOGS"/>
+	<uses-permission android:name="android.permission.CAMERA"></uses-permission>
+	<uses-feature android:name="android.hardware.camera" />
+	<uses-feature android:name="android.hardware.camera.autofocus" />
+	<uses-permission android:name="android.permission.VIBRATE"/>
+	<uses-permission android:name="android.permission.FLASHLIGHT"/>
+	<uses-permission android:name="android.permission.SEND_SMS"/>
+	<!-- 读取进程任务权限 -->
+    <uses-permission android:name="android.permission.GET_TASKS"/>
+	<supports-screens android:largeScreens="true"
+        android:normalScreens="true"
+        android:smallScreens="true"
+        android:resizeable="true"
+        android:anyDensity="true"/>
+    <application
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name" 
+        android:theme="@android:style/Theme.Light.NoTitleBar"
+        android:name="com.elephant.ediyou.CommonApplication">
+        <activity
+            android:name=".activity.LogoActivity"
+            android:label="@string/app_name" 
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        
+        <!-- 收到通知 ，桌面弹窗提醒 -->
+        <activity android:name=".activity.PopupPushScreenActivity" android:theme="@style/dialog" android:launchMode="singleInstance" android:screenOrientation="portrait" android:configChanges="orientation|keyboardHidden"></activity>
+        
+        <activity android:name=".activity.AuthorizeActivity" android:screenOrientation="portrait" android:configChanges="orientation|keyboardHidden"></activity>
+        <activity android:name=".activity.SnsShareActivity" android:screenOrientation="portrait" android:configChanges="orientation|keyboardHidden"></activity>
+        <activity android:name=".activity.AccountBindActivity" android:screenOrientation="portrait" android:configChanges="orientation|keyboardHidden"></activity>
+        <activity android:name=".activity.NotificationAndLocationSettingActivity" android:screenOrientation="portrait" android:configChanges="orientation|keyboardHidden"></activity>
+        <activity android:name="com.elephant.ediyou.activity.MainHomeActivityGroup" android:screenOrientation="portrait" android:configChanges="orientation|keyboardHidden"></activity>
+        <activity android:name=".activity.MainHomeActivity" android:screenOrientation="portrait" android:configChanges="orientation|keyboardHidden"></activity>     
+        <activity android:name=".activity.LoginActivity" android:screenOrientation="portrait" android:configChanges="orientation|keyboardHidden"></activity>
+        <activity android:name=".activity.RegisterActivity" android:screenOrientation="portrait" android:configChanges="orientation|keyboardHidden"></activity>
+        <activity android:name=".activity.RegisterNextActivity" android:screenOrientation="portrait" android:configChanges="orientation|keyboardHidden"></activity>
+        <activity android:name=".activity.RegisterProtocolActivity" android:screenOrientation="portrait" android:configChanges="orientation|keyboardHidden"></activity>
+        <activity android:name=".activity.RooProfileActivity" android:screenOrientation="portrait" android:configChanges="orientation|keyboardHidden" android:windowSoftInputMode="adjustResize|stateHidden"></activity>
+        <activity android:name=".activity.RooScheduleActivity" android:screenOrientation="portrait" android:configChanges="orientation|keyboardHidden"></activity>
+        <activity android:name=".activity.RooOrderDetailActivity" android:screenOrientation="portrait" android:configChanges="orientation|keyboardHidden"></activity>        
+        <activity android:name=".activity.OrderCommentActivity" android:screenOrientation="portrait" android:configChanges="orientation|keyboardHidden"></activity>
+        <activity android:name=".activity.RooSearchActivity" android:screenOrientation="portrait" android:configChanges="orientation|keyboardHidden"></activity>
+        <activity android:name=".activity.RooApplyActivity" android:screenOrientation="portrait" android:configChanges="orientation|keyboardHidden"></activity>
+        <activity android:name=".activity.RooSearchResultActivity" android:screenOrientation="portrait" android:configChanges="orientation|keyboardHidden"></activity>
+        <activity android:name=".activity.KoalaProfileActivity" android:screenOrientation="portrait" android:configChanges="orientation|keyboardHidden" android:windowSoftInputMode="adjustResize|stateHidden"></activity>
+        <activity android:name=".activity.KoalaOrderDetailActivity" android:screenOrientation="portrait" android:configChanges="orientation|keyboardHidden"></activity>
+        <activity android:name=".activity.KoalaOrderConfirmActivity" android:screenOrientation="portrait" android:configChanges="orientation|keyboardHidden"></activity>
+        <activity android:name=".activity.KoalaOrderCommentActivity" android:screenOrientation="portrait" android:configChanges="orientation|keyboardHidden"></activity>        
+        <activity android:name=".activity.KoalaAppointmentConfirmActivity" android:screenOrientation="portrait" android:configChanges="orientation|keyboardHidden"></activity>
+        <activity android:name=".activity.KoalaAppointmentLocationActivity" android:screenOrientation="portrait" android:configChanges="orientation|keyboardHidden"></activity>
+        <activity android:name=".activity.AppointmentTimeActivity" android:screenOrientation="portrait" android:configChanges="orientation|keyboardHidden"></activity>
+        <activity android:name=".activity.PersonalLetterActivity" android:screenOrientation="portrait" android:configChanges="orientation|keyboardHidden"></activity>
+        <activity android:name=".activity.ReportActivity" android:screenOrientation="portrait" android:configChanges="orientation|keyboardHidden"></activity>
+        <activity android:name=".activity.PayWithAlipayActivity" android:screenOrientation="portrait" android:configChanges="orientation|keyboardHidden"></activity>
+        <activity android:name=".activity.ChoiceHotLocationActivity" android:screenOrientation="portrait" android:configChanges="orientation|keyboardHidden"></activity>
+        <activity android:name=".activity.MyOrderActivity" android:screenOrientation="portrait" android:configChanges="orientation|keyboardHidden"></activity>		
+        <activity android:name=".activity.MyReceivedOrderActivity" android:screenOrientation="portrait" android:configChanges="orientation|keyboardHidden"></activity>
+        <activity android:name=".activity.KoalaOrderChoosePayActivity" android:screenOrientation="portrait" android:configChanges="orientation|keyboardHidden"></activity>
+        <activity android:name=".activity.MessageCenterActivity" android:screenOrientation="portrait" android:configChanges="orientation|keyboardHidden"></activity>
+        <activity android:name=".activity.HelpCenterActivity" android:screenOrientation="portrait" android:configChanges="orientation|keyboardHidden"></activity>
+		<activity android:name=".activity.AboutUsActivity" android:screenOrientation="portrait" android:configChanges="orientation|keyboardHidden"></activity>
+		<activity android:name="com.elephant.ediyou.activity.FeedBackActivity" android:screenOrientation="portrait" android:configChanges="orientation|keyboardHidden"></activity>
+        
+        <activity android:name=".activity.EventDetailActivity" android:screenOrientation="portrait" android:configChanges="orientation|keyboardHidden"></activity>
+        <activity android:name=".activity.EventDetailPhotoFallActivity" android:screenOrientation="portrait" android:configChanges="orientation|keyboardHidden"></activity>
+        <activity android:name=".activity.EventPhotoActivity" android:screenOrientation="portrait" android:configChanges="orientation|keyboardHidden"></activity>
+        <activity android:name=".activity.RecommendDetailActivity" android:screenOrientation="portrait" android:configChanges="orientation|keyboardHidden"></activity>
+        
+        <activity android:name=".activity.EventNewActivity" android:screenOrientation="portrait" android:configChanges="orientation|keyboardHidden" android:windowSoftInputMode="adjustResize|stateHidden"></activity>
+        <activity android:name=".activity.EventPhotoEditActivity" android:screenOrientation="portrait" android:configChanges="orientation|keyboardHidden" android:windowSoftInputMode="adjustResize|stateHidden"></activity>
+        
+        <activity android:name=".activity.EventHomeListActivity" android:screenOrientation="portrait" android:configChanges="orientation|keyboardHidden"></activity>
+        <activity android:name=".activity.EventSearchActivity" android:screenOrientation="portrait" android:configChanges="orientation|keyboardHidden"></activity>
+        <activity android:name=".activity.EventSearchResultActivity" android:screenOrientation="portrait" android:configChanges="orientation|keyboardHidden"></activity>
+        
+        <activity android:name=".activity.MyAccountActivity" android:screenOrientation="portrait" android:configChanges="orientation|keyboardHidden"></activity>
+        <activity android:name=".activity.MyAccountPrepaidActivity" android:screenOrientation="portrait" android:configChanges="orientation|keyboardHidden"></activity>
+
+        <!-- 考拉和袋鼠个人详情 -->
+        <activity android:name=".activity.KoalaInfoActivity" android:screenOrientation="portrait" android:configChanges="orientation|keyboardHidden"></activity>
+       
+        <activity android:name=".activity.RooInfoActivity" android:screenOrientation="portrait" android:configChanges="orientation|keyboardHidden"></activity>
+        <activity android:name=".activity.KoalaRooPhotoActivity" android:screenOrientation="portrait" android:configChanges="orientation|keyboardHidden"></activity>
+        <activity android:name=".activity.KoalaRooPhotoShowActivity" android:screenOrientation="portrait" android:configChanges="orientation|keyboardHidden"></activity>
+        
+        <activity android:name=".activity.EventListActivity" android:screenOrientation="portrait" android:configChanges="orientation|keyboardHidden"></activity>
+        <activity android:name=".activity.RooRecommendfallActivity_NotUse" android:screenOrientation="portrait" android:configChanges="orientation|keyboardHidden"></activity>
+        <activity android:name=".activity.RooRecommendDetailActivity" android:screenOrientation="portrait" android:configChanges="orientation|keyboardHidden"></activity>
+        <activity android:name=".activity.RooRecommendPhotoActivity" android:screenOrientation="portrait" android:configChanges="orientation|keyboardHidden"></activity>
+        <activity android:name=".activity.RooRecommentNewActivity" android:screenOrientation="portrait" android:configChanges="orientation|keyboardHidden"></activity>
+        <activity android:name=".activity.RooRecommendActivity" android:screenOrientation="portrait" android:configChanges="orientation|keyboardHidden"></activity>
+        
+        
+        <activity android:name=".sec.code.CaptureActivity" android:screenOrientation="landscape" android:configChanges="orientation|keyboardHidden"></activity>
+        
+        <!-- 新业务需求的界面 -->
+        <activity android:name=".activity.RooSelfCenterActivity" android:screenOrientation="portrait" android:configChanges="orientation|keyboardHidden"></activity>
+        <activity android:name="com.elephant.ediyou.activity.RooShowActivity" android:screenOrientation="portrait" android:configChanges="orientation|keyboardHidden"></activity>
+        <activity android:name=".activity.RooServeInfoActivity" android:screenOrientation="portrait" android:configChanges="orientation|keyboardHidden"></activity>
+        <activity android:name="com.elephant.ediyou.activity.SelfBaseInfoEditActivity" android:screenOrientation="portrait" android:configChanges="orientation|keyboardHidden"></activity>
+        <activity android:name=".activity.RooCTCAActivity" android:screenOrientation="portrait" android:configChanges="orientation|keyboardHidden"></activity>
+       	<activity android:name=".activity.KoalaSelfCenterActivity" android:screenOrientation="portrait" android:configChanges="orientation|keyboardHidden"></activity>
+       	<activity android:name=".activity.KoalaShowActivity" android:screenOrientation="portrait" android:configChanges="orientation|keyboardHidden"></activity>
+       	<activity android:name=".activity.EventListHadJoinActivity" android:screenOrientation="portrait" android:configChanges="orientation|keyboardHidden"></activity>
+       	<activity android:name=".activity.CommentShowActivity" android:screenOrientation="portrait" android:configChanges="orientation|keyboardHidden"></activity>
+       	<activity android:name=".activity.SelfIntroductionActivity" android:screenOrientation="portrait" android:configChanges="orientation|keyboardHidden"></activity>
+       	<activity android:name=".activity.SelfPhotosAndAvatarActivity" android:screenOrientation="portrait" android:configChanges="orientation|keyboardHidden"></activity>
+       	<activity android:name=".activity.EventListHadCreateActivity" android:screenOrientation="portrait" android:configChanges="orientation|keyboardHidden"></activity>
+        <activity android:name=".activity.ReportOrderActivity" android:screenOrientation="portrait" android:configChanges="orientation|keyboardHidden"></activity>
+       	<activity android:name=".activity.EventCommentActivity" android:screenOrientation="portrait" android:configChanges="orientation|keyboardHidden"></activity>			       	
+       	<activity android:name=".activity.GetMyPasswordBackActivity" android:screenOrientation="portrait" android:configChanges="orientation|keyboardHidden" android:windowSoftInputMode="adjustResize|stateHidden"></activity>			       	
+       	<activity android:name=".activity.BannerItemWebViewActivity" android:screenOrientation="portrait" android:configChanges="orientation|keyboardHidden" ></activity>			       	
+       	<activity android:name=".activity.ChoiseHobbyActivity" android:screenOrientation="portrait" android:configChanges="orientation|keyboardHidden" ></activity>			       	
+       	<activity android:name=".activity.MessageSysDetailActivity" android:screenOrientation="portrait" android:configChanges="orientation|keyboardHidden" ></activity>			       	
+        <activity android:name=".activity.MyLocationLBSActivity" android:screenOrientation="portrait" android:configChanges="orientation|keyboardHidden"></activity>
+		<!-- 引导页 -->
+       	<activity android:name=".activity.FirstStartActivity" android:screenOrientation="portrait" android:configChanges="orientation|keyboardHidden"></activity>
+       	<!-- 活动时间选择 -->
+        <activity android:name=".activity.RooChooseEventTimeActivity" android:screenOrientation="portrait" android:configChanges="orientation|keyboardHidden"></activity>
+        
+        
+        <!-- HomeActivity及其布局因修改暂不使用了,以MainHomeTabHostActivity取代 -->
+        <activity android:name=".activity.HomeActivity" android:screenOrientation="portrait" android:configChanges="orientation|keyboardHidden"></activity>
+        <!-- EventHomeListActivityOld及其布局因修改暂不使用了-->
+        <activity android:name=".activity.EventHomeListActivityOld" android:screenOrientation="portrait" android:configChanges="orientation|keyboardHidden"></activity>
+        
+        <!-- 新的注册方式（仅手机注册）添加的界面 -->
+        <activity android:name=".activity.RegisterWithPhoneNumActivity" android:screenOrientation="portrait" android:configChanges="orientation|keyboardHidden" android:windowSoftInputMode="adjustResize|stateHidden"></activity>			       	
+        <activity android:name=".activity.RegisterSetPasswordActivity" android:screenOrientation="portrait" android:configChanges="orientation|keyboardHidden" android:windowSoftInputMode="adjustResize|stateHidden"></activity>			       	
+               	
+        
+        <!-- 腾讯开放平台 -->
+		<activity
+		    android:name="com.tencent.weibo.webview.OAuthV2AuthorizeWebView"
+		    android:label="@string/app_name" >
+		</activity>
+		
+		<!-- QQ互联开放平台 -->
+		<activity android:name="com.tencent.tauth.TAuthView" android:screenOrientation="portrait" android:launchMode="singleTask" android:configChanges="keyboardHidden|navigation|orientation" >
+			<intent-filter>  
+			    <action android:name="android.intent.action.VIEW" />  
+			    <category android:name="android.intent.category.DEFAULT" />  
+			    <category android:name="android.intent.category.BROWSABLE" />  
+			    <!-- <data android:scheme="auth"/> -->
+			</intent-filter>  
+        </activity>
+        <!-- push服务 -->
+        <service android:name=".service.PullService" >
+            <intent-filter>
+	          	<action android:name="com.elephant.ediyou.service.PullService"></action>
+	         </intent-filter>
+        </service>
+        
+        <!-- 注册开机广播 -->
+        <receiver 
+            android:name=".receiver.PhoneStartReceiver">
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED"/>
+            </intent-filter>
+        </receiver>
+        
+        <meta-data android:value="518b176a56240b10b4004487" android:name="UMENG_APPKEY"/>
+        <meta-data android:value="应用汇" android:name="UMENG_CHANNEL"/>
+    </application>
+    
+
+</manifest>

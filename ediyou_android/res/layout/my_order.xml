@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_repeat"
+    android:orientation="vertical" >
+
+    <include layout="@layout/common_title_bar" />
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:background="@drawable/repeat_blod_slant" >
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="6dip"
+            android:layout_gravity="bottom"
+            android:background="@drawable/repeat_shade_line_down" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/repeat_blod_slant"
+            android:orientation="horizontal" >
+
+            <Button
+                android:id="@+id/btn_ordering"
+                android:layout_width="0dp"
+                android:layout_height="fill_parent"
+                android:layout_weight="1"
+                android:background="@drawable/order_tab_bg_sel"
+                android:gravity="center"
+                android:shadowColor="@android:color/darker_gray"
+                android:shadowDx="0.5"
+                android:shadowDy="0.5"
+                android:shadowRadius="0.3"
+                android:text="预约中"
+                android:textColor="@color/text_green"
+                android:textSize="18sp" />
+
+            <View
+                android:layout_width="0.5dip"
+                android:layout_height="match_parent" />
+
+            <Button
+                android:id="@+id/btn_underWay"
+                android:layout_width="0dp"
+                android:layout_height="fill_parent"
+                android:layout_weight="1"
+                android:background="@drawable/order_tab_bg_nor"
+                android:shadowColor="@android:color/darker_gray"
+                android:shadowDx="0.5"
+                android:shadowDy="0.5"
+                android:shadowRadius="0.3"
+                android:text="进行中"
+                android:textColor="@color/text_grey"
+                android:textSize="18sp" />
+
+            <View
+                android:layout_width="0.5dip"
+                android:layout_height="match_parent" />
+
+            <Button
+                android:id="@+id/btn_completed"
+                android:layout_width="0dp"
+                android:layout_height="fill_parent"
+                android:layout_weight="1"
+                android:background="@drawable/order_tab_bg_nor"
+                android:gravity="center"
+                android:shadowColor="@android:color/darker_gray"
+                android:shadowDx="0.5"
+                android:shadowDy="0.5"
+                android:shadowRadius="0.3"
+                android:text="已完成"
+                android:textColor="@color/text_grey"
+                android:textSize="18sp" />
+        </LinearLayout>
+    </FrameLayout>
+
+    <TextView
+        android:id="@+id/tvShowNo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_margin="10dp"
+        android:background="@drawable/bg_describe"
+        android:gravity="center"
+        android:text="还没有相关数据记录哦！"
+        android:textColor="@color/text_grey"
+        android:textSize="14sp"
+        android:visibility="gone" />
+
+    <ListView
+        android:id="@+id/lv_order_list"
+        style="@style/listviewStyle"
+        android:layout_width="match_parent"
+        android:layout_height="0dip"
+        android:layout_gravity="center_horizontal"
+        android:layout_weight="1"
+        android:divider="@color/list_divider" >
+    </ListView>
+
+</LinearLayout>

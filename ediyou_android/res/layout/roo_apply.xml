@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/bg_nor"
+    android:orientation="vertical" >
+    
+    <include layout="@layout/common_title_bar" />
+    
+    <LinearLayout 
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:orientation="vertical">
+        
+        <TextView 
+            android:id="@+id/tvProtocolContent"
+	        android:layout_width="fill_parent"
+	        android:layout_height="wrap_content"
+	        android:text="申请成为袋鼠，需完成以下必要认证，并且扣款账户余额不得低于500元。在成为袋鼠之后，必须遵守《袋鼠协议》中的条款，严禁进行任何违反国家法律、法规的活动。"/>
+        
+        <LinearLayout 
+	        android:layout_width="fill_parent"
+	        android:layout_height="fill_parent"
+	        android:padding="5dp"
+	        android:orientation="horizontal">
+        <TextView 
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="15dp"
+            android:text="点击查看"/>
+        <TextView 
+            android:id="@+id/tvProtocolCheck"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="15dp"
+            android:textStyle="italic"
+            android:textColor="#0000FF"
+            android:text="《E地游袋鼠协议》"/>
+	    </LinearLayout>
+	    
+        <TextView 
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:textSize="20dp"
+            android:text="袋鼠必要认证:"/>
+        
+        <ListView
+	        android:id="@+id/lvRooAuthList"
+	        android:layout_width="fill_parent"
+	        android:layout_height="fill_parent"
+	        android:cacheColorHint="@android:color/transparent"
+	        android:listSelector="@android:color/transparent" 
+	        android:fadingEdge="none" 
+	        android:divider="@drawable/layer_line"
+	        android:dividerHeight="2.0dip"
+	        android:background="@drawable/bg_describe"
+	        android:layout_weight="1"
+	        android:scrollbars="none" />
+
+    </LinearLayout>
+    
+</LinearLayout>

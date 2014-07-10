@@ -1,0 +1,41 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="bg_panel">#161818</color>
+    <color name="text_green">#9DD063</color><!-- 浅绿色字体 -->
+    <color name="blue">#20A0CD</color><!-- test -->
+    <color name="bg_nor">#F9F8F3</color><!-- test,普通的类似于白色的背景 -->
+    <color name="text_grey">#BEB082</color><!-- 灰色字体 -->
+    <color name="koala_bg">#F9F8F3</color><!-- 考拉背景 -->
+    <color name="text_dark_green">#86B857</color>
+    <color name="text_red">#E81425</color>
+    <color name="calendar_week_font">#CEC3A0</color>
+    <color name="calendar_day_font">#A0A0A0</color><!-- 当月的天 -->
+    <color name="calendar_other_month_day_font">#E5E5E5</color><!-- 其他月的天 -->
+    <color name="calendar_busy_day_bg">#DCDCDC</color><!-- 繁忙天的背景 -->
+    
+
+	<color name="setting_item_gray_nor">#313131</color>
+	<color name="setting_item_font_nor">#D1C9AE</color>
+	<color name="setting_item_deliver">#0D0C0C</color>
+	
+	<color name="setting_title_dark_green_bg">#8DBB59</color>
+	
+    <color name="order_orange_color">#C0B386</color><!-- 订单字体颜色 -->
+    <color name="order_bg_color">#F9F8F3</color><!-- 订单背景颜色 -->
+    <color name="order_green_color">#A7D473</color><!-- 订单背景颜色 -->
+    <color name="order_red_color">#E70E1F</color><!-- 订单红色字体 -->
+    
+    <color name="viewfinder_frame">#ff000000</color>
+	<color name="viewfinder_laser">#ffff0000</color>
+	<color name="viewfinder_mask">#60000000</color>
+	<color name="result_view">#b0000000</color>
+	<color name="possible_result_points">#c0ffff00</color>  
+	
+	<color name="item_press_color">#C0BBBB</color>
+	<color name="pall_bg_gray">#EEEEEE</color>
+	<color name="black_gray">#707070</color><!-- 浅黑色 \ 灰黑色-->
+	<color name="coffee">#BEB082</color><!-- 咖啡色 -->
+	<color name="list_divider">#D3CFBE</color><!-- listview分割线，灰色 -->
+	<color name="hint_gray">#B0AFAE</color><!-- EditText的提示文字颜色，浅灰 -->
+	
+</resources>

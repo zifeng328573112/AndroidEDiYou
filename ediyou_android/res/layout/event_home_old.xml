@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:clickable="true" >
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="top"
+        android:orientation="vertical" >
+
+        <RelativeLayout
+            android:id="@+id/rlCommon"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bg_title"
+            android:paddingTop="3dp" >
+
+            <Button
+                android:id="@+id/btnLeft"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="10dp"
+                android:background="@drawable/ic_back__selector" />
+
+            <LinearLayout
+                android:id="@+id/llHomeCenterTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:clickable="true"
+                android:gravity="center"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:id="@+id/tvTitleLocation"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="苏州"
+                    android:textColor="@android:color/white"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
+
+                <ImageView
+                    android:id="@+id/ivChoiceLocation"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="2dp"
+                    android:src="@drawable/ic_location_choice" />
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/btnSearch"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/ic_search"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="10dp"/>
+             
+        </RelativeLayout>
+
+        <com.elephant.ediyou.view.ScrollViewIncludeViewPager
+            android:id="@+id/svivEventHome"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:scrollbars="none" >
+
+            <LinearLayout
+                android:id="@+id/llHome"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical" >
+
+                <FrameLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@color/bg_nor"
+                    android:padding="5dp" >
+
+                    <android.support.v4.view.ViewPager
+                        android:id="@+id/viewPagerHomeEvent"
+                        android:layout_width="fill_parent"
+                        android:layout_height="128dp"
+                        android:focusable="true"
+                        android:focusableInTouchMode="true"
+                        android:background="@drawable/bg_top_roo_tile" />
+                </FrameLayout>
+                
+                <com.elephant.ediyou.view.GridViewInScrollView
+                    android:id="@+id/gvEventShow"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:background="@color/bg_nor"
+                    android:cacheColorHint="@android:color/transparent"
+                    android:focusable="false"
+                    android:focusableInTouchMode="false"
+                    android:horizontalSpacing="5dp"
+                    android:listSelector="@android:color/transparent"
+                    android:numColumns="2"
+                    android:padding="5dp"
+                    android:scrollbars="none"
+                    android:stretchMode="columnWidth"
+                    android:verticalSpacing="5dp" >
+                </com.elephant.ediyou.view.GridViewInScrollView>
+            </LinearLayout>
+        </com.elephant.ediyou.view.ScrollViewIncludeViewPager>
+    </LinearLayout>
+
+    <!--  <include layout="@layout/progress" /> -->
+
+</FrameLayout>

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_nor"
+    android:orientation="vertical" >
+    <include layout="@layout/common_title_bar" />
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" >
+
+        <TextView
+            android:id="@+id/tvRegisterProtocol"
+            android:layout_gravity="center_horizontal"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:background="@drawable/bg_describe"
+            android:padding="15dp"
+            android:text="如何在E地游找到自己喜欢的旅游胜地....."
+            android:textSize="14sp" />
+    </ScrollView>
+
+</LinearLayout>

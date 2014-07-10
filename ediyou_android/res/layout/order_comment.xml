@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <include layout="@layout/common_title_bar" />
+
+    <TextView
+        android:id="@+id/tvCommentPoint"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:layout_marginTop="5dp"
+        android:paddingBottom="15dp"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:paddingTop="15dp"
+        android:text="考拉已为您的服务打分咯，请为您的服务对象打分。如在7日内未打分，系统将自动给予对方3星评价"
+        android:textSize="16sp"
+        android:textStyle="bold" />
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:background="@drawable/bg_describe"
+        android:orientation="vertical" >
+
+        <RatingBar
+            android:id="@+id/ratingbar"
+            style="@style/ratingBar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="15dp"
+            android:maxHeight="50dp"
+            android:minHeight="40dp"
+            android:numStars="5"
+            android:stepSize="1" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="13px"
+                android:text="  差  " />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="13px"
+                android:layout_marginRight="13px"
+                android:text="一般" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="13px"
+                android:layout_marginRight="13px"
+                android:text="还行" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="13px"
+                android:layout_marginRight="13px"
+                android:text="不错" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="13px"
+                android:text="很棒" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <EditText
+        android:id="@+id/edtComment"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/bg_describe"
+        android:gravity="top|left"
+        android:hint="请给出您的评论(最多100字)"
+        android:textColorHint="@color/hint_gray"
+        android:lines="10"
+        android:padding="10dp"
+        android:textSize="14sp" />
+
+</LinearLayout>

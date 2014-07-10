@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@drawable/bg_repeat"
+    android:orientation="vertical" >
+
+    <include layout="@layout/common_title_bar" />
+
+    <TextView
+        android:id="@+id/tvShowNo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:background="@drawable/bg_describe"
+        android:gravity="center"
+        android:text="还没有活动记录哦！"
+        android:textColor="@color/text_grey"
+        android:textSize="14sp"
+        android:visibility="gone" />
+
+    <GridView
+        android:id="@+id/gvEventShow"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:background="@color/bg_nor"
+        android:cacheColorHint="@android:color/transparent"
+        android:focusable="false"
+        android:focusableInTouchMode="false"
+        android:horizontalSpacing="5dp"
+        android:listSelector="@android:color/transparent"
+        android:numColumns="2"
+        android:padding="5dp"
+        android:scrollbars="none"
+        android:stretchMode="columnWidth"
+        android:verticalSpacing="5dp" >
+    </GridView>
+
+</LinearLayout>

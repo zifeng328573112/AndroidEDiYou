@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:clickable="true" >
+    <!-- Old -->   
+	<com.elephant.ediyou.view.ScrollViewIncludeViewPager
+	    android:id="@+id/svivEventHome"
+	    android:layout_width="fill_parent"
+	    android:layout_height="wrap_content"
+	    android:scrollbars="none" >
+	
+	    <com.elephant.ediyou.view.GridViewInScrollView
+	        android:id="@+id/gvEventShow"
+	        android:layout_width="fill_parent"
+	        android:layout_height="fill_parent"
+	        android:background="@color/bg_nor"
+	        android:cacheColorHint="@android:color/transparent"
+	        android:focusable="false"
+	        android:focusableInTouchMode="false"
+	        android:horizontalSpacing="5dp"
+	        android:listSelector="@android:color/transparent"
+	        android:numColumns="2"
+	        android:padding="5dp"
+	        android:scrollbars="none"
+	        android:stretchMode="columnWidth"
+	        android:verticalSpacing="5dp" >
+	    </com.elephant.ediyou.view.GridViewInScrollView>
+	</com.elephant.ediyou.view.ScrollViewIncludeViewPager>
+</LinearLayout>

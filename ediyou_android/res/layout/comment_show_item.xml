@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="3dp"
+        android:background="@drawable/bg_describe"
+        android:gravity="center_vertical"
+        android:orientation="vertical"
+        android:padding="10dp" >
+
+        <RatingBar
+            android:id="@+id/ratingbarShow"
+            style="@style/ratingBarSmail"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:maxHeight="40dp"
+            android:minHeight="40dp"
+            android:isIndicator="true"
+            android:numStars="5" 
+            android:stepSize="1" />
+
+        <TextView
+            android:id="@+id/tvContent"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:singleLine="true"
+            android:text="这个袋鼠还不错额，带我玩儿很多地方"
+            android:textSize="14.0sp" />
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp" >
+
+            <TextView
+                android:id="@+id/tvNickname"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingBottom="5dp"
+                android:paddingTop="5dp"
+                android:singleLine="true"
+                android:text="Merry"
+                android:textColor="@color/text_grey"
+                android:textSize="14.0sp" />
+
+            <TextView
+                android:id="@+id/tvCreateTime"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="10dp"
+                android:text="12-12-02 10:22"
+                android:textColor="@color/text_grey"
+                android:textSize="12.0sp" />
+        </RelativeLayout>
+    </LinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <include layout="@layout/common_title_bar"/>
+    
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:text="被举报订单号:"
+            android:textColor="@color/coffee"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/tvOrderNum"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:text="11111111"
+            android:textColor="@color/text_green"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginBottom="10dp" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:text="被举报对象："
+            android:textColor="@color/coffee"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/tvWasNickName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:text="Sundy"
+            android:textColor="@color/text_green"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+    </RelativeLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginBottom="10dp"
+        android:text="举报原因："
+        android:textColor="@color/coffee"
+        android:textSize="18sp" />
+	
+    <EditText
+        android:id="@+id/edtReportReason"
+        android:layout_width="fill_parent"
+        android:layout_height="200dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginLeft="10dp"
+        android:padding="5dp"
+        android:gravity="left|top"
+        android:textSize="16sp"
+        android:inputType="textMultiLine"
+        android:maxLength="250"
+        android:textStyle="bold"
+        android:background="@drawable/bg_describe" />
+    
+</LinearLayout>

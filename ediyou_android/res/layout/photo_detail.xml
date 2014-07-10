@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/container"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@android:color/black"
+    android:orientation="vertical" >
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/photo_detail_pager"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent" />
+
+    <include
+        android:id="@+id/top_view"
+        android:layout_alignParentTop="true"
+        layout="@layout/common_title_bar" />
+
+    <RelativeLayout
+        android:id="@+id/rlPhotoShare"
+        android:layout_width="fill_parent"
+        android:layout_height="40.0dip"
+        android:layout_alignParentBottom="true"
+        android:background="@android:color/white"
+        android:gravity="center_vertical" >
+
+        <Button
+            android:id="@+id/btnCollect"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:background="@android:color/transparent"
+            android:drawableLeft="@drawable/ic_collect_big_nor"
+            android:drawablePadding="5dip"
+            android:gravity="center_vertical"
+            android:text="256"
+            android:textColor="@color/order_green_color" />
+
+        <Button
+            android:id="@+id/btnShare"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@id/btnCollect"
+            android:background="@android:color/transparent"
+            android:drawableLeft="@drawable/ic_share_big_nor"
+            android:drawablePadding="5dip"
+            android:gravity="center_vertical"
+            android:text="1112"
+            android:textColor="@color/order_green_color" />
+
+        <Button
+            android:id="@+id/btnDown"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="10dp"
+            android:background="@drawable/ic_down_big_nor" />
+    </RelativeLayout>
+
+</RelativeLayout>

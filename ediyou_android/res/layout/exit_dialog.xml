@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/bg_describe"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/order_green_color"
+        android:orientation="vertical" >
+
+        <TextView
+            android:id="@+id/tv_message"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="25dp"
+            android:gravity="center_horizontal"
+            android:text="您确认退出吗？"
+            android:textColor="@color/order_orange_color"
+            android:textSize="25dp"
+            android:textStyle="bold" />
+
+        <!-- 确认按钮 -->
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:layout_marginTop="25dp" >
+
+            <Button
+                android:id="@+id/btn_ok"
+                android:layout_width="80dp"
+                android:layout_height="35dp"
+                android:layout_alignParentLeft="true"
+                android:layout_below="@id/tv_message"
+                android:layout_marginLeft="35dp"
+                android:background="@drawable/bg_btn_selector"
+                android:gravity="center"
+                android:text="@string/ok"
+                android:textColor="@color/order_green_color"
+                android:textSize="18dp"
+                android:textStyle="bold" />
+
+            <!-- 取消按钮 -->
+
+            <Button
+                android:id="@+id/btn_cancel"
+                android:layout_width="80dp"
+                android:layout_height="35dp"
+                android:layout_alignParentRight="true"
+                android:layout_below="@id/tv_message"
+                android:layout_marginRight="35dp"
+                android:background="@drawable/bg_btn_selector"
+                android:gravity="center"
+                android:text="@string/cancel"
+                android:textColor="@color/order_green_color"
+                android:textSize="18dp"
+                android:textStyle="bold" />
+        </RelativeLayout>
+    </LinearLayout>
+
+</LinearLayout>

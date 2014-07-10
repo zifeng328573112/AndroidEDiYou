@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_repeat"
+    android:orientation="vertical" >
+
+    <include layout="@layout/common_title_bar" />
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="12dp"
+        android:background="@android:color/transparent" >
+
+        <ImageView
+            android:id="@+id/ivSysPhoto"
+            android:layout_width="56dp"
+            android:layout_height="56dp"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:background="@drawable/bg_photo"
+            android:scaleType="fitCenter"
+            android:src="@drawable/ic_launcher" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            android:layout_toRightOf="@id/ivSysPhoto"
+            android:background="@drawable/bg_letter_left"
+            android:orientation="vertical" >
+
+            <TextView
+                android:id="@+id/tvNoti"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="5dp"
+                android:text="系统通知，请查看"
+                android:textSize="14sp" />
+
+            <Button
+                android:id="@+id/btnSysComment"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="right"
+                android:background="@drawable/bg_btn_selector"
+                android:paddingBottom="10dp"
+                android:paddingLeft="15dp"
+                android:paddingRight="15dp"
+                android:paddingTop="10dp"
+                android:shadowColor="@android:color/darker_gray"
+                android:shadowDx="0.5"
+                android:shadowDy="0.5"
+                android:shadowRadius="0.3"
+                android:text="立即评分"
+                android:textColor="@color/text_green"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+        </LinearLayout>
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/tvSendTime"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:background="@drawable/bg_letter_send_time"
+        android:text="2012-12-12 23:11:12"
+        android:textColor="@android:color/white"
+        android:textSize="12sp" />
+
+</LinearLayout>
